@@ -1,0 +1,126 @@
+---------------------------------------------------------------
+[ 2019-05-02T00:31:11+08:00 ] 127.0.0.1 HEAD /favicon.ico?_=6173135
+[ info ] www.yq.io/favicon.ico?_=6173135 [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：377.16kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+  '_' => '6173135',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-02T18:30:01+08:00 ] 127.0.0.1 HEAD /favicon.ico?_=893046307
+[ info ] www.yq.io/favicon.ico?_=893046307 [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：377.20kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+  '_' => '893046307',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-02T20:35:40+08:00 ] 127.0.0.1 HEAD /favicon.ico?_=892979859
+[ info ] www.yq.io/favicon.ico?_=892979859 [运行时间：0.015600s][吞吐率：64.10req/s] [内存消耗：377.20kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+  '_' => '892979859',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-02T20:56:04+08:00 ] 127.0.0.1 HEAD /favicon.ico?_=341871192
+[ info ] www.yq.io/favicon.ico?_=341871192 [运行时间：0.015600s][吞吐率：64.10req/s] [内存消耗：377.20kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+  '_' => '341871192',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-02T21:30:25+08:00 ] 127.0.0.1 HEAD /favicon.ico?_=453506081
+[ info ] www.yq.io/favicon.ico?_=453506081 [运行时间：0.015600s][吞吐率：64.10req/s] [内存消耗：377.20kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+  '_' => '453506081',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-02T22:01:39+08:00 ] 127.0.0.1 HEAD /favicon.ico?_=657523431
+[ info ] www.yq.io/favicon.ico?_=657523431 [运行时间：0.015600s][吞吐率：64.10req/s] [内存消耗：377.20kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+  '_' => '657523431',
+)
+[ info ] [ LOG ] INIT File

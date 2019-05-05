@@ -1,0 +1,3577 @@
+---------------------------------------------------------------
+[ 2019-04-29T22:01:51+08:00 ] 127.0.0.1 GET /admin/home/give.html
+[ info ] www.yq.io/admin/home/give.html [运行时间：0.150009s][吞吐率：6.67req/s] [内存消耗：2,059.31kb] [文件加载：93]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/g_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/give_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\home\give.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `give` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `give` LIMIT 0,15 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_menu` [ RunTime:0.037002s ]
+[ sql ] [ SQL ] SELECT manage_power.path as url,`manage_menu`.* FROM `manage_menu` LEFT JOIN `manage_power` ON `manage_power`.`menu_id`=`manage_menu`.`id` WHERE  `manage_menu`.`level` IN ('1','2') ORDER BY `manage_menu`.`sort`  asc [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:01:52+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:06+08:00 ] 127.0.0.1 GET /admin/home/give.html
+[ info ] www.yq.io/admin/home/give.html [运行时间：0.114007s][吞吐率：8.77req/s] [内存消耗：1,926.36kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/g_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/give_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\home\give.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `give` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `give` LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:08:06+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:10+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.yq.io/admin/index/index.html [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：2,001.64kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/give.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\index\index.html [ array (
+  0 => 'config',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:08:10+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:15+08:00 ] 127.0.0.1 GET /admin/home/banner
+[ info ] www.yq.io/admin/home/banner [运行时间：0.088005s][吞吐率：11.36req/s] [内存消耗：2,043.98kb] [文件加载：93]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/banner' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\home\banner.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `banner` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:08:15+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:17+08:00 ] 127.0.0.1 GET /admin/home/banner
+[ info ] www.yq.io/admin/home/banner [运行时间：0.216013s][吞吐率：4.63req/s] [内存消耗：1,901.84kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/banner' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\home\banner.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.038002s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `banner` LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:08:18+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.016001s][吞吐率：62.50req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:21+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.019002s][吞吐率：52.63req/s] [内存消耗：380.83kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/banner',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:21+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:40+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.111006s][吞吐率：9.01req/s] [内存消耗：2,015.33kb] [文件加载：93]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/banner',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:08:41+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:49+08:00 ] 127.0.0.1 GET /admin/home/banner
+[ info ] www.yq.io/admin/home/banner [运行时间：0.084005s][吞吐率：11.90req/s] [内存消耗：1,901.79kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/banner' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\home\banner.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `banner` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:08:49+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:08:53+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.095006s][吞吐率：10.53req/s] [内存消耗：1,877.08kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/banner',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:08:53+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.031001s][吞吐率：32.26req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:09:36+08:00 ] 127.0.0.1 GET /admin/config/index
+[ info ] www.yq.io/admin/config/index [运行时间：0.091005s][吞吐率：10.99req/s] [内存消耗：1,998.80kb] [文件加载：92]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/config/index' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\config\index.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `key`,`value` FROM `config` WHERE  `type` = 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:09:37+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:09:38+08:00 ] 127.0.0.1 GET /admin/home/banner
+[ info ] www.yq.io/admin/home/banner [运行时间：0.092005s][吞吐率：10.87req/s] [内存消耗：1,901.78kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/config/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/banner' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\home\banner.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `banner` LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:09:38+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:09:39+08:00 ] 127.0.0.1 GET /admin/home/b_edit.html?id=137
+[ info ] www.yq.io/admin/home/b_edit.html?id=137 [运行时间：0.103006s][吞吐率：9.71req/s] [内存消耗：2,004.41kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/banner',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/home/b_edit_html' => '',
+  'id' => '137',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\home\b_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  (  id=137 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T22:09:41+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T22:47:27+08:00 ] 127.0.0.1 HEAD /favicon.ico?_=86917547
+[ info ] www.yq.io/favicon.ico?_=86917547 [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：377.18kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/b_edit.html?id=137',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+  '_' => '86917547',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:08:19+08:00 ] 127.0.0.1 HEAD /favicon.ico?_=958030454
+[ info ] www.yq.io/favicon.ico?_=958030454 [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：377.18kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/b_edit.html?id=137',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+  '_' => '958030454',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:33:58+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.103006s][吞吐率：9.71req/s] [内存消耗：1,877.09kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/b_edit.html?id=137',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:33:59+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:34:04+08:00 ] 127.0.0.1 GET /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.066004s][吞吐率：15.15req/s] [内存消耗：1,686.53kb] [文件加载：85]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:34:04+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.015001s][吞吐率：66.66req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:34:06+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.097005s][吞吐率：10.31req/s] [内存消耗：1,877.09kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/home/b_edit.html?id=137',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:34:46+08:00 ] 127.0.0.1 GET /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.087005s][吞吐率：11.49req/s] [内存消耗：1,979.46kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate_add.html [ array (
+  0 => 'manage',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:34:47+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.017001s][吞吐率：58.82req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:37:09+08:00 ] 127.0.0.1 GET /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.104006s][吞吐率：9.61req/s] [内存消耗：1,979.52kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate_add.html [ array (
+  0 => 'manage',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:37:10+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:39:21+08:00 ] 127.0.0.1 GET /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.086005s][吞吐率：11.63req/s] [内存消耗：1,841.60kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate_add.html [ array (
+  0 => 'manage',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:39:22+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:41:26+08:00 ] 127.0.0.1 GET /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.104006s][吞吐率：9.61req/s] [内存消耗：1,983.91kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate_add.html [ array (
+  0 => 'manage',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:41:27+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:41:37+08:00 ] 127.0.0.1 POST /admin/certificate/b_add
+[ info ] www.yq.io/admin/certificate/b_add [运行时间：0.082004s][吞吐率：12.19req/s] [内存消耗：1,691.11kb] [文件加载：85]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'content-length' => '37958',
+  'content-type' => 'multipart/form-data; boundary=---------------------------22620286043472',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/b_add' => '',
+  'title' => '发发三大市场',
+  'introduce' => '萨法发顺丰',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:41:37+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:42:13+08:00 ] 127.0.0.1 POST /admin/certificate/b_add
+[ info ] www.yq.io/admin/certificate/b_add [运行时间：0.078004s][吞吐率：12.82req/s] [内存消耗：1,691.20kb] [文件加载：85]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'content-length' => '37958',
+  'content-type' => 'multipart/form-data; boundary=---------------------------22620286043472',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/b_add' => '',
+  'title' => '发发三大市场',
+  'introduce' => '萨法发顺丰',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:42:13+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:42:51+08:00 ] 127.0.0.1 POST /admin/certificate/b_add
+[ info ] www.yq.io/admin/certificate/b_add [运行时间：0.065003s][吞吐率：15.38req/s] [内存消耗：1,691.20kb] [文件加载：85]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'content-length' => '37958',
+  'content-type' => 'multipart/form-data; boundary=---------------------------22620286043472',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/b_add' => '',
+  'title' => '发发三大市场',
+  'introduce' => '萨法发顺丰',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:42:51+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.023002s][吞吐率：43.47req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:42:53+08:00 ] 127.0.0.1 GET /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.082005s][吞吐率：12.19req/s] [内存消耗：1,983.88kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate_add.html [ array (
+  0 => 'manage',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:43:03+08:00 ] 127.0.0.1 POST /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.109006s][吞吐率：9.17req/s] [内存消耗：1,826.80kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'content-length' => '37957',
+  'content-type' => 'multipart/form-data; boundary=---------------------------4521417518554',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+  'title' => '傻瓜式的方式',
+  'introduce' => '啊沙发沙发是',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] INSERT INTO `certificate` (`title` , `introduce` , `img`) VALUES ('傻瓜式的方式' , '啊沙发沙发是' , '/uploads/20190429\\c41ab8105d549ecd8bdd7850a24da207.png') [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:43:03+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:43:04+08:00 ] 127.0.0.1 GET /admin/certificate/certificate.html
+[ info ] www.yq.io/admin/certificate/certificate.html [运行时间：0.091005s][吞吐率：10.99req/s] [内存消耗：1,882.69kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:43:05+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:04+08:00 ] 127.0.0.1 GET /admin/certificate/certificate.html
+[ info ] www.yq.io/admin/certificate/certificate.html [运行时间：0.115006s][吞吐率：8.70req/s] [内存消耗：2,032.20kb] [文件加载：93]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:05+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:05+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.101006s][吞吐率：9.90req/s] [内存消耗：2,028.52kb] [文件加载：96]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: data[D:\phpStudy\WWW\yq\runtime\temp\df750bf51d6b05c6b69f460411580dfd.php:161]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:05+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:14+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.168009s][吞吐率：5.95req/s] [内存消耗：1,992.61kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023002s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:16+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:18+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.109006s][吞吐率：9.17req/s] [内存消耗：1,889.84kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit.html?id=16',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:18+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.017001s][吞吐率：58.82req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:20+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.104006s][吞吐率：9.61req/s] [内存消耗：1,849.47kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:20+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.032001s][吞吐率：31.25req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:25+08:00 ] 127.0.0.1 POST /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.083005s][吞吐率：12.05req/s] [内存消耗：1,677.59kb] [文件加载：85]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'content-length' => '461',
+  'content-type' => 'multipart/form-data; boundary=---------------------------176142400713234',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit.html?id=16',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+  'title' => '傻瓜式的方式',
+  'introduce' => '啊沙发沙发是
+但还不到凤凰
+锦帆奶粉',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:25+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:26+08:00 ] 127.0.0.1 GET /admin/certificate/certificate_add
+[ info ] www.yq.io/admin/certificate/certificate_add [运行时间：0.096006s][吞吐率：10.42req/s] [内存消耗：1,848.83kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_add' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate_add.html [ array (
+  0 => 'manage',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:27+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:29+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.097005s][吞吐率：10.31req/s] [内存消耗：1,889.84kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate_add',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:30+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.068004s][吞吐率：14.70req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:50+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.083005s][吞吐率：12.05req/s] [内存消耗：1,992.28kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:50+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:47:59+08:00 ] 127.0.0.1 POST /admin/certificate/c_edit
+[ info ] www.yq.io/admin/certificate/c_edit [运行时间：0.075004s][吞吐率：13.33req/s] [内存消耗：1,701.10kb] [文件加载：86]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'content-length' => '470',
+  'content-type' => 'multipart/form-data; boundary=---------------------------121242568011536',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit.html?id=16',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit' => '',
+  'title' => '傻瓜式的方式',
+  'introduce' => '啊沙发沙发是发n
+鬼斧神工拍摄
+gs是工伤事故',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: id[D:\phpStudy\WWW\yq\application\admin\controller\Certificate.php:69]
+---------------------------------------------------------------
+[ 2019-04-29T23:47:59+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.016001s][吞吐率：62.50req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:48:32+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.090005s][吞吐率：11.11req/s] [内存消耗：1,992.56kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:48:39+08:00 ] 127.0.0.1 POST /admin/certificate/c_edit
+[ info ] www.yq.io/admin/certificate/c_edit [运行时间：0.091006s][吞吐率：10.99req/s] [内存消耗：1,684.07kb] [文件加载：86]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'content-length' => '542',
+  'content-type' => 'multipart/form-data; boundary=---------------------------15784979419584',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit.html?id=16',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit' => '',
+  'id' => '16',
+  'title' => '傻瓜式的方式',
+  'introduce' => '啊沙发沙发是
+挂电话
+建发股份',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] UPDATE `certificate`  SET `id` = 16 , `title` = '傻瓜式的方式' , `introduce` = '啊沙发沙发是<br/>挂电话<br/>建发股份'  WHERE  (  id=16 ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:48:39+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:48:40+08:00 ] 127.0.0.1 GET /admin/certificate/banner.html
+[ info ] www.yq.io/admin/certificate/banner.html [运行时间：0.073004s][吞吐率：13.70req/s] [内存消耗：1,698.48kb] [文件加载：85]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/banner_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:48:40+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:48:50+08:00 ] 127.0.0.1 GET /admin/certificate/banner.html
+[ info ] www.yq.io/admin/certificate/banner.html [运行时间：0.079004s][吞吐率：12.66req/s] [内存消耗：1,698.52kb] [文件加载：85]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/banner_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:48:50+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.018001s][吞吐率：55.55req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:48:53+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.089005s][吞吐率：11.24req/s] [内存消耗：1,849.64kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:48:56+08:00 ] 127.0.0.1 POST /admin/certificate/c_edit
+[ info ] www.yq.io/admin/certificate/c_edit [运行时间：0.116006s][吞吐率：8.62req/s] [内存消耗：1,684.09kb] [文件加载：86]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'content-length' => '557',
+  'content-type' => 'multipart/form-data; boundary=---------------------------276733251814085',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit.html?id=16',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit' => '',
+  'id' => '16',
+  'title' => '傻瓜式的方式',
+  'introduce' => '啊沙发沙发是
+<br/>挂电话
+<br/>建发股份',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] UPDATE `certificate`  SET `id` = 16 , `title` = '傻瓜式的方式' , `introduce` = '啊沙发沙发是<br/><br/>挂电话<br/><br/>建发股份'  WHERE  (  id=16 ) [ RunTime:0.006000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:48:56+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:48:57+08:00 ] 127.0.0.1 GET /admin/certificate/certificate.html
+[ info ] www.yq.io/admin/certificate/certificate.html [运行时间：0.096006s][吞吐率：10.42req/s] [内存消耗：1,889.98kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:48:58+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:49:05+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.113006s][吞吐率：8.85req/s] [内存消耗：1,849.66kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:49:05+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:50:46+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.107006s][吞吐率：9.35req/s] [内存消耗：1,993.09kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:50:48+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.024001s][吞吐率：41.67req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:51:08+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.090005s][吞吐率：11.11req/s] [内存消耗：1,849.97kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:51:09+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.023002s][吞吐率：43.47req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:51:10+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.106006s][吞吐率：9.43req/s] [内存消耗：2,031.74kb] [文件加载：93]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit.html?id=16',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.027001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:51:11+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:51:14+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.081005s][吞吐率：12.34req/s] [内存消耗：1,849.64kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:51:15+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:53:17+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.125008s][吞吐率：8.00req/s] [内存消耗：1,851.25kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.026001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:53:18+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:53:20+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.083005s][吞吐率：12.05req/s] [内存消耗：1,891.18kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit.html?id=16',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:53:21+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.096005s][吞吐率：10.42req/s] [内存消耗：1,850.94kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:53:22+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:53:35+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.095005s][吞吐率：10.53req/s] [内存消耗：1,851.30kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:53:36+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.022002s][吞吐率：45.45req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:53:41+08:00 ] 127.0.0.1 GET /admin/certificate/c_edit.html?id=16
+[ info ] www.yq.io/admin/certificate/c_edit.html?id=16 [运行时间：0.086005s][吞吐率：11.63req/s] [内存消耗：1,851.27kb] [文件加载：89]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/c_edit_html' => '',
+  'id' => '16',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\c_edit.html [ array (
+  0 => 'res',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` WHERE  (  id=16 ) LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:53:42+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.021002s][吞吐率：47.61req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:53:45+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.091005s][吞吐率：10.99req/s] [内存消耗：1,891.13kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/c_edit.html?id=16',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:54:26+08:00 ] 127.0.0.1 GET /admin/certificate/certificate
+[ info ] www.yq.io/admin/certificate/certificate [运行时间：0.085005s][吞吐率：11.76req/s] [内存消耗：1,891.12kb] [文件加载：91]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/admin/certificate/certificate',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/admin/certificate/certificate' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\admin\view\certificate\certificate.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:54:27+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：377.51kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:57:55+08:00 ] 127.0.0.1 GET /index/index/certificate.html
+[ info ] www.yq.io/index/index/certificate.html [运行时间：0.120007s][吞吐率：8.33req/s] [内存消耗：1,880.59kb] [文件加载：87]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/certificate_html' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\index\view\index\certificate.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'bs',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `key`,`value` FROM `config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:57:55+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:58:24+08:00 ] 127.0.0.1 GET /index/index/certificate.html
+[ info ] www.yq.io/index/index/certificate.html [运行时间：0.078004s][吞吐率：12.82req/s] [内存消耗：1,871.08kb] [文件加载：86]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/certificate_html' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\index\view\index\certificate.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'bs',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:58:24+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:58:59+08:00 ] 127.0.0.1 GET /index/index/certificate.html
+[ info ] www.yq.io/index/index/certificate.html [运行时间：0.096006s][吞吐率：10.42req/s] [内存消耗：1,871.23kb] [文件加载：86]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/certificate_html' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\index\view\index\certificate.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'bs',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:58:59+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：377.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-29T23:59:13+08:00 ] 127.0.0.1 GET /index/index/certificate.html
+[ info ] www.yq.io/index/index/certificate.html [运行时间：0.072004s][吞吐率：13.89req/s] [内存消耗：1,749.69kb] [文件加载：84]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'referer' => 'http://www.yq.io/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/certificate_html' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\yq\application\index\view\index\certificate.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'bs',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,15 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-29T23:59:14+08:00 ] 127.0.0.1 GET /favicon.ico
+[ info ] www.yq.io/favicon.ico [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：378.09kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\yq\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'cookie' => 'PHPSESSID=i04s47ugm46onuqi5g55efqtl6',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'www.yq.io',
+)
+[ info ] [ PARAM ] array (
+  '/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File

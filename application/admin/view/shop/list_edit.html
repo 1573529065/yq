@@ -1,0 +1,115 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<section class="panel">
+    <header class="panel-heading">
+        <h4>修改商品列表</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+        <form class="form-horizontal" method="post" action="" role="form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品列表名</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="{$list.name}" name="name" class="form-control"
+                           placeholder="请输入商品名">
+                </div>
+            </div>
+           <div class="form-group">
+                <label class="col-sm-2 control-label">上级</label>
+
+                <div class="col-sm-5">
+                    
+                    <select name="pid" class="form-control">
+                        <option value="0">一级菜单</option>
+                        {:exportTreeEdit($list_total,0,$list.pid)}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">是否开启</label>
+
+                <div class="col-sm-5">
+                    <input type="radio" name='is_show' value="1" {if $list['is_show'] ==1} checked {/if}>是  <input type="radio" name="is_show" value="0" {if $list['is_show'] ==0} checked {/if}>否
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" data-url="" class="btn btn-primary" onclick="return edit()">修改
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+<script src="/admin/vendor/fuelux/checkbox.js"></script>
+<script>
+                        function edit(){
+                        name = $("input[name='name']").val();
+                        is_show = $("input[name='is_show']:checked").val();
+                        pid = $("select[name='pid']").find("option:selected").val();
+                        if (!name || !is_show){
+                        $.alert({
+                        title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+                                content: "请填写完整！",
+                                confirmButton: '确定',
+                                confirmButtonClass: 'btn btn-info',
+                                animation: 'scaleY',
+                                theme: 'material'
+                        })
+                                return false;
+                        }
+                        $.confirm({
+                        title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+                                content: '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">确定修改？</div>',
+                                confirmButton: '确定',
+                                confirmButtonClass: 'btn btn-info',
+                                cancelButton: '取消',
+                                cancelButtonClass: 'btn btn-danger',
+                                animation: 'scaleY',
+                                theme: 'material',
+                                confirm: function () {
+                                $.ajax({
+                                url: "{:url('shop/list_edit')}",
+                                        method: 'post',
+                                        data:{name:name, is_show:is_show, id:{$list.id},pid:pid},
+                                        dataType: 'json',
+                                        success: function (response) {
+                                        if (response.code == 200){
+                                        $.confirm({
+                                        title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+                                                content: '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">'+response.msg+'</div>',
+                                                confirmButton: '返回首页',
+                                                confirmButtonClass: 'btn btn-info',
+                                                cancelButton: '留在本页',
+                                                cancelButtonClass: 'btn btn-danger',
+                                                animation: 'scaleY',
+                                                theme: 'material',
+                                                confirm: function () {
+                                                window.location.href = response.url;
+                                                }
+                                        });
+                                        return false;
+                                        } else{
+                                        main.waringAlert(response.msg)
+                                        }
+                                        },
+                                })
+                                }
+
+                        });
+                        return false;
+                        }
+
+</script>
+{/block}

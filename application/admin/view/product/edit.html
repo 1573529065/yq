@@ -1,0 +1,126 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<section class="panel">
+    <header class="panel-heading">
+        <h4>编辑能源发生器</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+        <form class="form-horizontal" method="post" action="{:url('admin/product/update',['id'=>$info->id])}" role="form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">能源发生器名称</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="{$info->product_name}" name="product_name" class="form-control"
+                           placeholder="请输入能源发生器名称">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">矿机logo</label>
+
+                <div class="col-sm-5">
+                    <!--<img src="{$info->image_url}" id="img">-->
+                    <input type="file" name="image_url" class="form-control">
+                </div>
+                不修改不用填
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">酒logo</label>
+
+                <div class="col-sm-5">
+                    <!--<img src="{$info->image_url}" id="img">-->
+                    <input type="file" name="image_url_jiu" class="form-control">
+                </div>
+                不修改不用填
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">开采率</label>
+
+                <div class="col-sm-2">
+                    <input type="text" name="rate_min" class="form-control" placeholder="最低开采率" value="{$info->rate_min}">
+                </div>
+                <label class="col-sm-1 control-label">-</label>
+                <div class="col-sm-2">
+                    <input type="text" name="rate_max" class="form-control" placeholder="最高开采率" value="{$info->rate_max}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">日产</label>
+
+                <div class="col-sm-2">
+                    <input type="text" name="yield_min" class="form-control" placeholder="最低日产" value="{$info->yield_min}">
+                </div>
+                <label class="col-sm-1 control-label">-</label>
+                <div class="col-sm-2">
+                    <input type="text" name="yield_max" class="form-control" placeholder="最高日产" value="{$info->yield_max}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">显示日产</label>
+
+                <div class="col-sm-2">
+                    <input type="text" name="yield_min_display" class="form-control" placeholder="最低日产" value="{$info->yield_min_display}">
+                </div>
+                <label class="col-sm-1 control-label">-</label>
+                <div class="col-sm-2">
+                    <input type="text" name="yield_max_display" class="form-control" placeholder="最高日产" value="{$info->yield_max_display}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">能量价格</label>
+
+                <div class="col-sm-2">
+                    <input type="text" value="{$info->price}" name="price" class="form-control"
+                           placeholder="请输入价格">
+                </div>
+
+                <!-- <label class="col-sm-1 control-label">宝石价格</label>
+
+                <div class="col-sm-2">
+                    <input type="text" value="{$info->jewel_price}" name="jewel_price" class="form-control"
+                           placeholder="宝石价格">
+                </div> -->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">周期</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="{$info->period}" name="period" class="form-control"
+                           placeholder="请输入周期">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">级别</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="{$info->level}" name="level" class="form-control"
+                           placeholder="请输入级别">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">排序</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="{$info->sort}" name="sort" class="form-control"
+                           placeholder="数字越小,越靠前">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">确定修改
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+    <script src="/admin/vendor/fuelux/checkbox.js"></script>
+{/block}

@@ -1,0 +1,7 @@
+[11-Dec-2018 12:48:37 Asia/Shanghai] PHP Fatal error:  Cannot use think\facade\Cache as Cache because the name is already in use in D:\phpStudy\WWW\lizong2\application\common\service\Users\Identity.php on line 5
+[11-Dec-2018 13:17:54 Asia/Shanghai] PHP Fatal error:  Cannot use think\facade\Cache as Cache because the name is already in use in D:\phpStudy\WWW\lizong2\application\common\service\Users\Identity.php on line 5
+[11-Dec-2018 13:31:23 Asia/Shanghai] PHP Fatal error:  Cannot use think\facade\Cache as Cache because the name is already in use in D:\phpStudy\WWW\lizong2\application\common\service\Users\Identity.php on line 5
+[11-Dec-2018 13:50:41 Asia/Shanghai] PHP Fatal error:  Cannot use think\Cache as Cache because the name is already in use in D:\phpStudy\WWW\lizong2\application\common\service\Users\Identity.php on line 5
+[11-Dec-2018 13:51:35 Asia/Shanghai] PHP Fatal error:  Cannot use think\facade\Cache as Cache because the name is already in use in D:\phpStudy\WWW\lizong2\application\common\service\Users\Identity.php on line 5
+[11-Dec-2018 13:55:41 Asia/Shanghai] PHP Fatal error:  Cannot use think\facade\Cache as Cache because the name is already in use in D:\phpStudy\WWW\lizong2\application\common\service\Users\Identity.php on line 5
+[11-Dec-2018 14:00:06 Asia/Shanghai] PHP Fatal error:  Cannot use think\facade\Cache as Cache because the name is already in use in D:\phpStudy\WWW\lizong2\application\common\service\Users\Identity.php on line 5

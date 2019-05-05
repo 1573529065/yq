@@ -1,0 +1,120 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<section class="panel">
+    <header class="panel-heading">
+        <h4>商品列表</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+  <form class="form-horizontal" action="detail_list">
+            <div class="form-group">
+                <div class="col-xs-1 no-pd-r">
+                    <select name="level" class="form-control">
+                        <option value="0">请选择商品类型</option>
+                       {foreach $type as $t}
+                        <option value="{$t.id}" {if $Request.get.level == $t.id} selected {/if}>{$t.name}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                <div class="col-xs-1 no-pd-r">
+                    <select name="type" class="form-control">
+                        <option {if $Request.get.type == 'name'} selected {/if} value="name">商品名</option>
+                        <option {if $Request.get.type == 'price'} selected {/if} value="price">价格</option>
+                        <option {if $Request.get.type == 'price_xuni'} selected {/if} value="price_xuni">虚拟币价格</option>
+                        <option {if $Request.get.type == 'stock'} selected {/if} value="stock">库存</option>
+                    </select>
+                </div>
+                <div class="col-xs-3 no-pd-l">
+                     <input type="text" value="{$Request.get.keyword}" name="keyword" class="form-control" placeholder="请输入关键词搜索">
+                </div>
+                <button type="submit" class="btn btn-color">搜索</button>
+                 <a type="button" href="{:url('shop/detail_add')}" class="btn btn-info">添加商品</a>
+            </div>
+       </form>
+        <table class="table table-bordered table-striped no-margin">
+            <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">商品图片</th>
+                <th class="text-center">商品名</th>
+                <th class="text-center">价格(￥)</th>
+                <th class="text-center">虚拟币价格</th>
+                <th class="text-center">库存</th>
+                <th class="text-center">商品类型</th>
+                <th class="text-center">是否返算力</th>
+                <th class="text-center">来源</th>
+                <th class="text-center">创建时间</th>
+                <th class="text-center">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if !empty($list)}
+            {foreach $list as $entity}
+            <tr>
+                <td class="text-center">{$entity->id}</td>
+                <td class="text-center">
+                    <img src="{$entity->img}" width="50px" height="50px" alt="图片错误">
+                    <img src="{$entity->img1}" width="50px" height="50px" alt="图片错误">
+                    <img src="{$entity->img2}" width="50px" height="50px" alt="图片错误">
+                </td>
+                <td class="text-center">{$entity->name}</td>
+                <td class="text-center">
+                    {$entity->price}
+                </td>
+                <td class="text-center">
+                       {$entity->price_xuni}
+                </td>
+                <td class="text-center"> {$entity->stock}</td>
+                <td class="text-center">{$entity->lname}</td>
+                <td class="text-center">
+                    {if $entity['is_back'] == 1}
+                    <a class="btn btn-xs btn-success">是</a>
+                    {else /}
+                          <a class="btn btn-xs btn-danger">否</a>
+                    {/if}
+                    <br>
+                    {if $entity['is_back'] == 1}
+                    数量:{$entity['power_num']}
+                    {/if}
+                </td>
+                <td class="text-center">{$entity->getSource($entity->source)}</td>
+                <td class="text-center">{$entity->add_time}</td>
+                <td class="text-center">
+                    <a href="{:url('shop/edit',['id'=>$entity->id,'page'=>$page])}" class="btn btn-xs btn-info">编辑</a>
+                    <a onclick="showContent(this)" data-content="{$entity->remark}" class="btn btn-xs btn-primary">详情</a>
+                     <a data-url="{:url('shop/remark_delete',['id'=>$entity->id])}" onclick="main.ajaxDelete(this)"
+                       data-msg="确定清空详情？" class="btn btn-xs btn-danger">清空</a>
+                    <a data-url="{:url('shop/delete',['id'=>$entity->id])}" onclick="main.ajaxDelete(this)"
+                       data-msg="确定要删除该商品吗？" class="btn btn-xs btn-danger">删除</a>
+                </td>
+            </tr>
+            {/foreach}
+            {else /}
+            <tr class="text-center">
+                <td colspan="9">暂无数据</td>
+            </tr>
+            {/if}
+            </tbody>
+        </table>
+        <div class="page" style="text-align: center">
+            {:$list->render()}
+        </div>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+    <script>
+        function showContent(e){
+            $.dialog({
+                title: '商品详情',
+                content: $(e).attr('data-content')
+            });
+        }
+    </script>
+{/block}

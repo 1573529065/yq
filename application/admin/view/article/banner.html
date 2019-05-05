@@ -1,0 +1,49 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<section class="panel">
+    <header class="panel-heading">
+        <h4>轮播列表</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+       
+        <table class="table table-bordered table-striped no-margin">
+            <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">图片</th>
+                <th class="text-center">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if !empty($list)}
+            {foreach $list as $entity}
+            <tr>
+                <td class="text-center">{$entity->id}</td>
+                <td class="text-center">
+                    <a target="_blank" href="{$entity->img}"><img style="width:100px;height: 100px" src="{$entity->img}"></a>
+                </td>
+                <td class="text-center">
+                    <a href="{:url('article/bannerEdit',['id'=>$entity->id])}" class="btn btn-xs btn-info">编辑</a>
+                </td>
+            </tr>
+            {/foreach}
+            {else /}
+            <tr class="text-center">
+                <td colspan="3">暂无数据</td>
+            </tr>
+            {/if}
+            </tbody>
+        </table>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+
+{/block}

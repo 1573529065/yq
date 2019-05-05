@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/topthink/.svn" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-installer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/khanamiryan/.svn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/.svn" />
+      <path value="$PROJECT_DIR$/vendor/khanamiryan/qrcode-detector-decoder" />
+      <path value="$PROJECT_DIR$/vendor/bacon/.svn" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/.svn" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/endroid/.svn" />
+      <path value="$PROJECT_DIR$/vendor/endroid/qrcode" />
+      <path value="$PROJECT_DIR$/vendor/.svn/tmp" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/.svn/prop-base" />
+      <path value="$PROJECT_DIR$/vendor/kosinix/grafika" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/.svn" />
+      <path value="$PROJECT_DIR$/vendor/.svn/text-base" />
+      <path value="$PROJECT_DIR$/vendor/kosinix/.svn" />
+      <path value="$PROJECT_DIR$/vendor/.svn/props" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-captcha" />
+    </include_path>
+  </component>
+</project>

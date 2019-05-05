@@ -1,0 +1,79 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<section class="panel">
+    <header class="panel-heading" style="margin-bottom: 10px">
+        <h4>商城类型列表</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+          <div class="form-group">
+<!--                <div class="col-xs-3">
+                    <input type="text" value="" name="keyword" class="form-control" placeholder="请输入用户名搜索">
+                </div>
+                <button type="submit" class="btn btn-color">搜索</button>-->
+                <a type="button" href="{:url('shop/list_add')}" class="btn btn-info">添加列表</a>
+            </div>
+        <table class="table table-bordered table-striped no-margin">
+            <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">商品列表名</th>
+                <!--<th class="text-center">手续费</th>-->
+                <th class="text-center">是否开启</th>
+                <th class="text-center">创建时间</th>
+                <th class="text-center">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if !empty($list)}
+            {foreach $list as $entity}
+            <tr>
+                <td class="text-center">{$entity->id}</td>
+                <td class="text-center">{$entity->name}</td>
+                <td class="text-center">
+                    {if $entity['is_show']==1}
+                    <a class="btn btn-xs btn-success">开启</a>
+                    {else /}
+                     <a class="btn btn-xs btn-danger">禁用</a>
+                    {/if}
+                </td>
+                <td class="text-center">
+                       {$entity->add_time}
+                </td>
+                <td class="text-center">
+                    <a href="{:url('shop/list_edit',['id'=>$entity->id])}" class="btn btn-xs btn-info">编辑</a>
+                    <a data-url="{:url('shop/list_del',['id'=>$entity->id])}" onclick="main.ajaxDelete(this)"
+                       data-msg="确定要删除 ID为{$entity->id} 商品吗？" class="btn btn-xs btn-danger">删除</a>
+                    <a href="{:url('shop/index',['pid'=>$entity->id])}" class="btn btn-xs btn-info">下级菜单</a>
+                </td>
+            </tr>
+            {/foreach}
+            {else /}
+            <tr class="text-center">
+                <td colspan="5">暂无数据</td>
+            </tr>
+            {/if}
+            </tbody>
+        </table>
+        <div class="page" style="text-align: center">
+            {//:$list->render()}
+        </div>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+    <script>
+        function showContent(e){
+            $.dialog({
+                title: '文章内容',
+                content: $(e).attr('data-content')
+            });
+        }
+    </script>
+{/block}

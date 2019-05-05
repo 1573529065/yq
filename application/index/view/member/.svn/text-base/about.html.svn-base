@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+    {include file="layout/head" /}
+</head>
+<style type="text/css">
+    .font {
+        width: 72%;
+        height: auto;
+        margin: 0 auto;
+    }
+</style>
+<body style="background:white;">
+<header class="mui-bar mui-bar-nav my-header" style="background-color: #17c3e5ssss">
+    <a href="/index/member/index" class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+
+    <h1 id="title" class="mui-title">关于我们</h1>
+</header>
+<div class="mui-content" style="background: white;">
+    <div class="img" style="text-align: center;">
+        <img src="/static/img/logo5.png" style="width: 25%;margin-top: 20px;"/>
+    </div>
+    <div class="font">
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QTE量子能区块链是由英国QTT团队联合中国海纳电子商务有限公司开发而成，是一款真正的结合实体的区块链平台，基于 Electric power 算法帮助用户盈利，通过模拟量子理论的运行方式，去促进量子技术发展产出称为量子能的奖励！。它通过手机等各种智能终端让人们将工作量转化为可交易应用的去中心化加密数字链，是基于移动互联网智能终端加密技术，用工作量来产生能量！是一个服务于未来的平台！
+        </p>
+    </div>
+</div>
+{include file="layout/footer" /}
+</body>
+</html>

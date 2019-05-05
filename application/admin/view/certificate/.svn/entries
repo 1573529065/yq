@@ -1,0 +1,28 @@
+10
+
+dir
+0
+svn://localhost/magic/application/admin/view/certificate
+svn://localhost/magic
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5a9e3fc1-e3e5-4307-afa4-118d95b29513
+

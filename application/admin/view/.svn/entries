@@ -1,0 +1,92 @@
+10
+
+dir
+99
+svn://localhost/magic/application/admin/view
+svn://localhost/magic
+
+
+
+2018-04-11T02:21:48.531176Z
+81
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5a9e3fc1-e3e5-4307-afa4-118d95b29513
+
+article
+dir
+
+certificate
+dir
+
+
+
+add
+
+config
+dir
+
+group
+dir
+
+home
+dir
+
+
+
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+copied
+svn://localhost/magic/application/admin/view/user
+99
+
+index
+dir
+
+layout
+dir
+
+login
+dir
+
+manage
+dir
+
+order
+dir
+
+product
+dir
+
+user
+dir
+
+
+
+delete
+

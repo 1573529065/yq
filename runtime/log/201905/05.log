@@ -1,0 +1,1281 @@
+---------------------------------------------------------------
+[2019-05-05T21:36:07+08:00] 192.168.10.1 GET yq.io/index.php/index/index/certificate.html
+[运行时间：0.192445s] [吞吐率：5.20req/s] [内存消耗：502.41kb] [文件加载：52]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+[2019-05-05T21:36:16+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.243556s] [吞吐率：4.11req/s] [内存消耗：759.52kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/index.php?admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018786s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.001121s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.001061s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.001174s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:11+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.118206s] [吞吐率：8.46req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000453s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000166s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:13+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.081938s] [吞吐率：12.20req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000366s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000184s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:14+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.078484s] [吞吐率：12.74req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000335s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000156s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:15+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.078900s] [吞吐率：12.67req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000402s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000773s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000165s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:18+08:00] 192.168.10.1 GET yq.io/index/index/certificate.html
+[运行时间：0.091201s] [吞吐率：10.96req/s] [内存消耗：686.91kb] [文件加载：82]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/certificate.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'bs',
+  3 => 'list',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000336s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,5 [ RunTime:0.000809s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:45+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.115327s] [吞吐率：8.67req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/index/index/certificate.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000584s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000153s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:53+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.112898s] [吞吐率：8.86req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000480s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.001635s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.001285s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000842s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000264s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:54+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.078014s] [吞吐率：12.82req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000330s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000160s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:56+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.080032s] [吞吐率：12.49req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000470s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.001222s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000160s ]
+---------------------------------------------------------------
+[2019-05-05T21:38:57+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.081128s] [吞吐率：12.33req/s] [内存消耗：626.97kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000356s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000166s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000159s ]
+---------------------------------------------------------------
+[2019-05-05T21:41:05+08:00] 192.168.10.1 GET yq.io/index.php?admin
+[运行时间：0.116524s] [吞吐率：8.58req/s] [内存消耗：627.26kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'admin' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000406s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000159s ]
+---------------------------------------------------------------
+[2019-05-05T21:41:20+08:00] 192.168.10.1 GET yq.io/index.php?admin/index/index
+[运行时间：0.133378s] [吞吐率：7.50req/s] [内存消耗：627.29kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000343s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000163s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000156s ]
+---------------------------------------------------------------
+[2019-05-05T21:41:27+08:00] 192.168.10.1 GET yq.io/index.php?admin/index/index.html
+[运行时间：0.081959s] [吞吐率：12.20req/s] [内存消耗：627.29kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000332s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.001017s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000172s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000339s ]
+---------------------------------------------------------------
+[2019-05-05T21:41:32+08:00] 192.168.10.1 GET yq.io/index.php?admin/index/index.php
+[运行时间：0.079154s] [吞吐率：12.63req/s] [内存消耗：627.29kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_php' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000331s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000163s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000229s ]
+---------------------------------------------------------------
+[2019-05-05T21:42:28+08:00] 192.168.10.1 GET yq.io/index.php?admin/home/index.php
+[运行时间：0.085962s] [吞吐率：11.63req/s] [内存消耗：627.29kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'admin/home/index_php' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000333s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000158s ]
+---------------------------------------------------------------
+[2019-05-05T21:49:27+08:00] 192.168.10.1 GET yq.io/index.php?admin/home/index.php
+[运行时间：0.125822s] [吞吐率：7.95req/s] [内存消耗：724.13kb] [文件加载：84]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'admin/home/index_php' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000439s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000168s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000158s ]
+[ error ] [8]Use of undefined constant THINK_VERSION - assumed 'THINK_VERSION'[/home/code/yq/public/index.php:28]
+---------------------------------------------------------------
+[2019-05-05T21:50:05+08:00] 192.168.10.1 GET yq.io/index.php?admin/home/index.php
+[运行时间：0.115080s] [吞吐率：8.69req/s] [内存消耗：610.38kb] [文件加载：81]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'admin/home/index_php' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000398s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000213s ]
+[ error ] [8]Use of undefined constant THINK_VERSION - assumed 'THINK_VERSION'[/home/code/yq/application/index/controller/Index.php:11]
+---------------------------------------------------------------
+[2019-05-05T21:57:16+08:00] 192.168.10.1 GET yq.io/index.php?admin/home/index.php
+[运行时间：0.123598s] [吞吐率：8.09req/s] [内存消耗：627.09kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'admin/home/index_php' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000393s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000158s ]
+---------------------------------------------------------------
+[2019-05-05T21:57:26+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.130192s] [吞吐率：7.68req/s] [内存消耗：626.81kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000343s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000164s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000158s ]
+---------------------------------------------------------------
+[2019-05-05T21:58:07+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.061283s] [吞吐率：16.32req/s] [内存消耗：334.31kb] [文件加载：63]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [0]语法解析错误: syntax error, unexpected 'acade' (T_STRING), expecting ',' or ';'[/home/code/yq/application/index/controller/Index.php:11]
+---------------------------------------------------------------
+[2019-05-05T21:58:22+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.073943s] [吞吐率：13.52req/s] [内存消耗：620.57kb] [文件加载：81]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000331s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000206s ]
+[ error ] [8192]Non-static method think\App::version() should not be called statically[/home/code/yq/application/index/controller/Index.php:12]
+---------------------------------------------------------------
+[2019-05-05T21:58:32+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.071558s] [吞吐率：13.97req/s] [内存消耗：610.49kb] [文件加载：81]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000328s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000210s ]
+[ error ] [8192]Non-static method think\App::version() should not be called statically[/home/code/yq/application/index/controller/Index.php:12]
+---------------------------------------------------------------
+[2019-05-05T21:58:33+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.073681s] [吞吐率：13.57req/s] [内存消耗：609.41kb] [文件加载：81]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000379s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000210s ]
+[ error ] [8192]Non-static method think\App::version() should not be called statically[/home/code/yq/application/index/controller/Index.php:12]
+---------------------------------------------------------------
+[2019-05-05T21:58:33+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.072560s] [吞吐率：13.78req/s] [内存消耗：609.41kb] [文件加载：81]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000387s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000212s ]
+[ error ] [8192]Non-static method think\App::version() should not be called statically[/home/code/yq/application/index/controller/Index.php:12]
+---------------------------------------------------------------
+[2019-05-05T21:59:11+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.081606s] [吞吐率：12.25req/s] [内存消耗：638.02kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000372s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000669s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000178s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000155s ]
+---------------------------------------------------------------
+[2019-05-05T22:01:53+08:00] 192.168.10.1 GET yq.io/admin/index/index
+[运行时间：0.110526s] [吞吐率：9.05req/s] [内存消耗：414.22kb] [文件加载：68]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-05-05T22:01:53+08:00] 192.168.10.1 GET yq.io/admin/login/index.html
+[运行时间：0.099332s] [吞吐率：10.07req/s] [内存消耗：419.73kb] [文件加载：67]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /home/code/yq/application/admin/view/login/index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-05-05T22:02:02+08:00] 192.168.10.1 POST yq.io/admin/login/login.html
+[运行时间：0.088078s] [吞吐率：11.35req/s] [内存消耗：682.02kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://yq.io',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000375s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user` [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_user` WHERE  `manage_name` = 'admin' LIMIT 1 [ RunTime:0.000256s ]
+[ error ] [400]用户名或者密码错误[/home/code/yq/application/admin/service/rbac/Users/Service.php:93]
+---------------------------------------------------------------
+[2019-05-05T22:02:09+08:00] 192.168.10.1 POST yq.io/admin/login/login.html
+[运行时间：0.080900s] [吞吐率：12.36req/s] [内存消耗：616.70kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://yq.io',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000338s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user` [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_user` WHERE  `manage_name` = 'admin' LIMIT 1 [ RunTime:0.000239s ]
+[ error ] [400]用户名或者密码错误[/home/code/yq/application/admin/service/rbac/Users/Service.php:93]
+---------------------------------------------------------------
+[2019-05-05T22:02:16+08:00] 192.168.10.1 POST yq.io/admin/login/login.html
+[运行时间：0.084052s] [吞吐率：11.90req/s] [内存消耗：620.01kb] [文件加载：82]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://yq.io',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '29',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000334s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user` [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_user` WHERE  `manage_name` = 'admin' LIMIT 1 [ RunTime:0.000236s ]
+---------------------------------------------------------------
+[2019-05-05T22:02:17+08:00] 192.168.10.1 GET yq.io/admin/index/index.html
+[运行时间：0.127972s] [吞吐率：7.81req/s] [内存消耗：807.16kb] [文件加载：90]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/admin/view/index/index.html [ array (
+  0 => 'config',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_menu` [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT manage_power.path as url,`manage_menu`.* FROM `manage_menu` LEFT JOIN `manage_power` ON `manage_power`.`menu_id`=`manage_menu`.`id` WHERE  `manage_menu`.`level` IN ('1','2') ORDER BY `manage_menu`.`sort` ASC [ RunTime:0.001247s ]
+---------------------------------------------------------------
+[2019-05-05T22:02:21+08:00] 192.168.10.1 GET yq.io/admin/index/index.html
+[运行时间：0.128017s] [吞吐率：7.81req/s] [内存消耗：871.23kb] [文件加载：88]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/admin/view/index/index.html [ array (
+  0 => 'config',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000392s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000266s ]
+---------------------------------------------------------------
+[2019-05-05T22:02:31+08:00] 192.168.10.1 GET yq.io/admin/config/index
+[运行时间：0.139968s] [吞吐率：7.14req/s] [内存消耗：924.34kb] [文件加载：91]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/admin/view/config/index.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000602s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.001103s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT `key`,`value` FROM `config` WHERE  `type` = 1 [ RunTime:0.000263s ]
+---------------------------------------------------------------
+[2019-05-05T22:03:47+08:00] 192.168.10.1 GET yq.io/
+[运行时间：0.106075s] [吞吐率：9.43req/s] [内存消耗：628.05kb] [文件加载：79]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/index.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'jianjie',
+  3 => 'inter',
+  4 => 'give',
+  5 => 'bs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000346s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jianjie` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT * FROM `jianjie` ORDER BY `sort` [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `inter` [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `inter` [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `give` [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `give` [ RunTime:0.000169s ]
+---------------------------------------------------------------
+[2019-05-05T22:03:53+08:00] 192.168.10.1 GET yq.io/index/index/certificate.html
+[运行时间：0.084804s] [吞吐率：11.79req/s] [内存消耗：685.97kb] [文件加载：82]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/index/view/index/certificate.html [ array (
+  0 => 'cf',
+  1 => 'ban',
+  2 => 'bs',
+  3 => 'list',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000395s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` ORDER BY `sort` [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `certificate` [ RunTime:0.000716s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `certificate` [ RunTime:0.000168s ]
+[ sql ] [ SQL ] SELECT * FROM `certificate` LIMIT 0,5 [ RunTime:0.000168s ]
+---------------------------------------------------------------
+[2019-05-05T22:05:17+08:00] 192.168.10.1 POST yq.io/admin/index/edit.html
+[运行时间：0.138051s] [吞吐率：7.24req/s] [内存消耗：699.72kb] [文件加载：87]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/admin/config/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4AM3DeOwtS88eIOd',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://yq.io',
+  'cache-control' => 'max-age=0',
+  'content-length' => '1162',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+)
+[ info ] [ PARAM ] array (
+  'title' => '徐州',
+  'keyword' => '1',
+  'msg' => '网站描述',
+  'name' => '公司名称',
+  'mobile' => '1',
+  'address' => '上海市中山西路1065号SOHO 中山广场B栋913室',
+  'email' => '1',
+  'record' => '12333',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000352s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.000884s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000261s ]
+[ error ] [0]没有文件被上传！[/home/code/yq/thinkphp/library/think/Request.php:1261]
+---------------------------------------------------------------
+[2019-05-05T22:06:44+08:00] 192.168.10.1 GET yq.io/admin/config/index
+[运行时间：0.136917s] [吞吐率：7.30req/s] [内存消耗：882.17kb] [文件加载：89]
+[ info ] [ LANG ] /home/code/yq/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=q1ud5tpsnbfs1936mfhidtc6b1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yq.io/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yq.io',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/code/yq/application/admin/view/config/index.html [ array (
+  0 => 'list',
+  1 => 'manage',
+  2 => 'menus',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000347s ] mysql:host=192.168.10.10;port=3306;dbname=yq;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_user_group` [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `manage_user_group` WHERE  `user_id` = 1 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `manage_group` [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `manage_group` WHERE  `id` IN (1) [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT `key`,`value` FROM `config` WHERE  `type` = 1 [ RunTime:0.000222s ]

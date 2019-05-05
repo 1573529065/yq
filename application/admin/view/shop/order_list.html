@@ -1,0 +1,169 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<section class="panel">
+    <header class="panel-heading">
+        <h4>订单列表</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+        <form class="form-horizontal" action="order_list">
+            <div class="form-group">
+                <div class="col-xs-1 no-pd-r">
+                    <select name="payment_type" class="form-control">
+                        <option value="0">支付方式</option>
+                        {foreach $payment_type as $kp=>$vp}
+                        <option value="{$kp}" {if !empty($get.payment_type)} {if $get.payment_type== $kp} selected {/if} {/if} >{$vp}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                <div class="col-xs-1 no-pd-r">
+                    <select name="status" class="form-control">
+                        <option value="0">状态</option>
+                        {foreach $status as $ks=>$vs}
+                        <option value="{$ks}" {if !empty($get.status)} {if $get['status'] == $ks} selected {/if} {/if}>{$vs}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                <div class="col-xs-1 no-pd-r">
+                    <select name="level" class="form-control">
+                        <option value="0">类型</option>
+                        <option value="nick_name" {if !empty($get.level)} {if $get['level'] == 'nick_name'} selected {/if} {/if}>用户名</option>
+                        <option value="mobile" {if !empty($get.level)} {if $get['level'] == 'mobile'} selected {/if} {/if}>手机号</option> 
+                    </select>
+                </div>
+                <div class="col-xs-3 no-pd-l">
+                    <input type="text" value="{$Request.get.keyword}" name="keyword" class="form-control" placeholder="请输入关键词搜索">
+                </div>
+                <button type="submit" class="btn btn-color">搜索</button>
+                <a type="submit" class="btn btn-color" target="_blank" onclick="down(this)">导出</a>
+                <!--<a type="button" href="{:url('shop/detail_add')}" class="btn btn-info">添加商品</a>-->
+            </div>
+        </form>
+        <table class="table table-bordered table-striped no-margin">
+            <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center" style='width:15%'>商品名</th>
+                    <th class="text-center">支付方式</th>
+                    <th class="text-center">数量</th>
+                    <th class="text-center">价格</th>
+                    <th class="text-center">状态</th>
+                    <th class="text-center">用户信息</th>
+                    <th class="text-center">发货号</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {if !empty($list)}
+                {foreach $list as $entity}
+                <tr>
+                    <td class="text-center">{$entity->id}</td>
+                    <td class="text-center">{$entity->shop_name}</td>
+                    <td class="text-center">{$payment_type[$entity->payment_type]}</td>
+                    <td class="text-center">{$entity->num}</td>
+                    <td class="text-center">
+                        {$entity->shop_price}
+                    </td>
+                    <td class="text-center">{:get_shop_order_status($entity->status)}</td>
+                    <td class="text-center">
+                        昵称：{$entity->nick_name}<br>手机号：{$entity->u_mobile}
+                    </td>
+                    <td class="text-center">
+                        {if $entity->status != 3}
+                        <input type="text" style="text-align: center" class="form-control" id="send_{$entity->id}" value="{$entity->numbers}" >
+                        {else /}
+                        {$entity->numbers}
+                        {/if}
+                    </td>
+                    <td class="text-center">
+                        {if $entity->status != 3}
+                        <a class="btn btn-xs btn-danger send" data-id="{$entity->id}">确认发货</a>
+                        {/if}
+                        <a class="btn btn-xs btn-info deta_{$entity->id}" onclick="detailed({$entity->id})">详细</a>
+                        <a class="btn btn-xs btn-info close_{$entity->id}" onclick="detailed_close({$entity->id})" style="display:none">关闭</a>
+                        <a data-url="{:url('shop/order_del',['id'=>$entity->id])}" onclick="main.ajaxDelete(this)"
+                           data-msg="确定要删除该商品吗？" class="btn btn-xs btn-danger">删除</a>
+                    </td>
+                </tr>
+                
+                <tr style="display:none" class="xiang_{$entity->id}">
+                    <th style="background-color: lightgray ">购买时间</th>
+                    <th style="background-color: lightgray ">发货时间</th>
+                    <th style="background-color: lightgray ">收货时间</th>
+                    <th style="background-color: lightgray ">收货人</th>
+                    <th style="background-color: lightgray ">收货地址</th>
+                    <th style="background-color: lightgray ">收货手机号</th>
+                    <th style="background-color: lightgray ">返算力</th>
+                </tr>
+                <tr style="display:none" class="xiang1_{$entity->id}">
+                    <td style="background-color: lightgray ">{$entity->add_time}</td>
+                    <td style="background-color: lightgray ">{$entity->send_time == '0000-00-00 00:00:00' ? '': $entity->send_time}</td>
+                    <td style="background-color: lightgray ">{$entity->collect_time == '0000-00-00 00:00:00' ? '' :$entity->collect_time}</td>
+                    <td style="background-color: lightgray ">{$entity->name }</td>
+                    <td style="background-color: lightgray ">{$entity->address}</td>
+                    <td style="background-color: lightgray ">{$entity->mobile}</td>
+                    <td style="background-color: lightgray ">{$entity->is_back == 1 ? '返' : '不返'}</td>
+                </tr>
+                {/foreach}
+                {else /}
+                <tr class="text-center">
+                    <td colspan="10">暂无数据</td>
+                </tr>
+                {/if}
+            </tbody>
+        </table>
+        <div class="page" style="text-align: center">
+            {:$list->render()}
+        </div>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+<script>
+    function down(tar){
+        href = window.location.href;
+        $(tar).attr("href",href+"&is_down=1");
+    }
+    function detailed(id) {
+        $('.deta_'+id).css('display','none');
+        $('.close_'+id).css('display','');
+        $(".xiang_"+id).css('display','');
+        $(".xiang1_"+id).css('display','');
+    }
+    function detailed_close(id){
+        $('.deta_'+id).css('display','');
+        $('.close_'+id).css('display','none');
+        $(".xiang_"+id).css('display','none');
+        $(".xiang1_"+id).css('display','none');
+    }
+    $('.send').click(function(){
+        id = $(this).attr('data-id');
+        num = $('#send_'+id).val();
+        if(num == ''){
+            return false;
+        }
+        
+        $.ajax({
+                    url: "{:url('send')}",
+                    method: 'POST',
+                    dataType: 'json',
+                    data:{id:id,numbers:num},
+                    success: function (response) {
+                        console.log(response);
+                         main.waringAlert(response.msg)
+                        if(response.code == 200){
+                             window.location.reload();
+                         }
+                    },
+                })
+    });
+    
+    
+</script>
+{/block}

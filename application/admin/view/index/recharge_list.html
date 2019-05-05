@@ -1,0 +1,154 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<section class="panel">
+    <header class="panel-heading">
+        <h4>二维码管理</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+        <span style="color:red">根据时间排序,前台只显示最近添加的一条</span>
+       <div class="form-group">
+                <a type="button" href="recharge_add" class="btn btn-info">添加</a>
+            </div>
+        <table class="table table-bordered table-striped no-margin">
+            <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">支付宝</th>
+                    <th class="text-center">微信</th>
+                    <th class="text-center">银行名称</th>
+                    <th class="text-center">银行卡号</th>
+                    <th class="text-center">收款人</th>
+                    <th class="text-center">添加时间</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {if !empty($list)}
+                {foreach $list as $entity}
+                <tr>
+                    <td class="text-center">{$entity->id}</td>
+                    <td class="text-center">
+                       <a href='{$entity->zfb}' target="_black">
+                       <img style='width:50px;height: 50px' src='{$entity->zfb}'>
+                       </a>
+                    </td>
+                    <td class="text-center">
+                         <a href='{$entity->wx}' target="_black">
+                        <img style='width:50px;height: 50px' src='{$entity->wx}'>
+                        </a>
+                    </td>
+                    <td class="text-center">
+                      {$entity->xh_name}
+                    </td>
+                    <td class="text-center">{$entity->xh_kh}</td>
+                    <td class="text-center">
+                       {$entity->name}
+                    </td>
+                    <td class="text-center">
+                        {$entity->create_time}
+                    </td>
+                    <td class="text-center">
+                        <a href="{:url('recharge_add',['id'=>$entity->id])}" class="btn btn-xs btn-info">编辑</a>
+                        <a data-url="{:url('recharge_del',['id'=>$entity->id])}" onclick="main.ajaxDelete(this)"
+                           data-msg="确定要删除ID{$entity->id}吗？" class="btn btn-xs btn-danger">删除</a>
+                    </td>
+                </tr>
+                
+                {/foreach}
+                {else /}
+                <tr class="text-center">
+                    <td colspan="10">暂无数据</td>
+                </tr>
+                {/if}
+            </tbody>
+        </table>
+        <div class="page" style="text-align: center">
+            {:$list->render()}
+        </div>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+<script>
+     function upgrade_reduce(e){
+        var id = $(e).attr('data-id');
+        var content = '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">' +
+                '<form class="form-horizontal" id="user-level" method="post" onsubmit="return false" role="form">';
+        content += '<div class="form-group"><label class="col-sm-4 control-label">驳回原因</label><div class="col-sm-7"><textarea class="form-control" rows="2" name="remark" id="reduce_remark">凭证不合格</textarea>' +
+                '</div></form></div>';
+
+        $.confirm({
+            title: '<strong style="color: #c7254e;font-size: 16px">扣罚</strong>',
+            content: content,
+            confirmButton: '确定',
+            confirmButtonClass: 'btn btn-info',
+            cancelButton: '取消',
+            cancelButtonClass: 'btn btn-danger',
+            animation: 'scaleY',
+            theme: 'material',
+            confirm: function () {
+                 var remark = $("#reduce_remark").val();
+                $.ajax({
+                    url: "{:url('index/recharge_reject')}",
+                    method: 'POST',
+                    data:{
+                        id:id,
+                        remark:remark
+                    },
+                    dataType: 'json',
+                    success: function (response) {
+                        main.waringAlert(response.msg)
+                        if (response.code == '200') {
+                                window.location.reload();
+                                return false;
+                            }
+                    },
+                })
+            }
+
+        });
+    }
+    function detailed(id) {
+        $('.deta_'+id).css('display','none');
+        $('.close_'+id).css('display','');
+        $(".xiang_"+id).css('display','');
+        $(".xiang1_"+id).css('display','');
+    }
+    function detailed_close(id){
+        $('.deta_'+id).css('display','');
+        $('.close_'+id).css('display','none');
+        $(".xiang_"+id).css('display','none');
+        $(".xiang1_"+id).css('display','none');
+    }
+    $('.send').click(function(){
+        id = $(this).attr('data-id');
+        num = $('#send_'+id).val();
+        if(num == ''){
+            return false;
+        }
+        
+        $.ajax({
+                    url: "{:url('send')}",
+                    method: 'POST',
+                    dataType: 'json',
+                    data:{id:id,numbers:num},
+                    success: function (response) {
+                        console.log(response);
+                         main.waringAlert(response.msg)
+                        if(response.code == 200){
+                             window.location.reload();
+                         }
+                    },
+                })
+    });
+    
+    
+</script>
+{/block}

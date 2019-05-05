@@ -1,0 +1,217 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<script type="text/javascript" src='https://unpkg.com/wangeditor/release/wangEditor.min.js'></script>
+<section class="panel">
+    <header class="panel-heading">
+        <h4>添加商品</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+        <form class="form-horizontal" method="post" action="detail_add" role="form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品名</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="" name="name" class="form-control"
+                           placeholder="请输入商品名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品类型</label>
+
+                <div class="col-sm-5">
+                    <select name="type" class="form-control">
+                        <option  value="">请选择</option>
+                        {foreach $cate as $key=>$item}
+                        <option value="{$item.id}">{$item.name}</option>
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品图片1</label>
+
+                <div class="col-sm-5">
+                    <input type="file" name="img" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品图片2</label>
+
+                <div class="col-sm-5">
+                    <input type="file" name="img1" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品图片3</label>
+
+                <div class="col-sm-5">
+                    <input type="file" name="img2" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品价格</label>
+                <div class="col-sm-5">
+                    <input type="text" value="" name="price" class="form-control"
+                           placeholder="请输入商品价格">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品虚拟币价格</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="" name="price_xuni" class="form-control"
+                           placeholder="请输入商品虚拟币价格">
+                </div>
+                <!--<div class="col-sm-5 help-block">-->
+                    <!--数字越小，排到最前面-->
+                <!--</div>-->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">余额价格</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="" name="yue_price" class="form-control"
+                           placeholder="请输入余额价格">
+                </div>
+                <!--<div class="col-sm-5 help-block">-->
+                    <!--数字越小，排到最前面-->
+                <!--</div>-->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">库存</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="" name="stock" class="form-control"
+                           placeholder="请输入库存">
+                </div>
+            </div>
+             <div class="form-group">
+                <label class="col-sm-2 control-label">返算力</label>
+
+                <div class="col-sm-5">
+                    <input type="radio" value="1" name="is_back" checked>返
+                    <input type="radio" value="0" name="is_back">不返
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">算力数量</label>
+
+                <div class="col-sm-5">
+                    <input type="text" value="" name="power_num" class="form-control"
+                           placeholder="请输入算力数量">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">来源</label>
+
+                <div class="col-sm-5">
+                    <input type="radio" value="1" name="source">用户
+                    <input type="radio" value="0" name="source" checked>后台
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">用户ID</label>
+
+               <div class="col-sm-5">
+                    <input type="text" value="" name="user_id" class="form-control"
+                           placeholder="请输入用户ID(选择后台可不填写)">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">详情</label>
+
+                <div class="col-sm-10"  style="width: 480px;min-height: 600px" id="editor">
+                    
+                </div>
+                <textarea style="display: none;" id="content" name="remark"></textarea>
+            </div>
+            <textarea style="display: none;" id="content" name="content"></textarea>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" data-url="" class="btn btn-primary" onclick="return add()">保存
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+    <script src="/admin/vendor/fuelux/checkbox.js"></script>
+      <script>
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        var $content = $('#content');
+        editor.customConfig.uploadFileName = 'image'
+        editor.customConfig.uploadImgServer = "{:url('upload/uploadEditor')}";
+        editor.customConfig.onchange = function (html) {
+            // 监控变化，同步更新到 textarea
+            $content.val(html)
+        };
+        editor.customConfig.menus = [
+            'head',  // 标题
+            'bold',  // 粗体
+            'fontSize',  // 字号
+            'fontName',  // 字体
+            'foreColor',  // 文字颜色
+            'backColor',  // 背景颜色
+            'link',  // 插入链接
+            'list',  // 列表
+            'justify',  // 对齐方式
+            'quote',  // 引用
+            'image',  // 插入图片
+        ]
+        editor.create()
+
+        $(function(){
+            $(".w-e-text-container").css('height','600px')
+        })
+    </script>
+<script>
+    function add(){
+        name = $("input[name='name']").val();
+        price = $("input[name='price']").val();
+        price_xuni = $("input[name='price_xuni']").val();
+        img = $("input[name='img']").val();
+        stock = $("input[name='stock']").val();
+        type = $("select[name='type']").val();
+        yue_price = $("input[name='yue_price']").val();
+        if(!name || !price || !price_xuni || !img || !stock || !type || !yue_price){
+            $.alert({
+                title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+                content: "请填写完整！",
+                confirmButton: '确定',
+                confirmButtonClass: 'btn btn-info',
+                animation: 'scaleY',
+                theme: 'material'
+            })
+            return false;
+        }
+        $.confirm({
+            title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+            content: '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">确定保存？</div>',
+            confirmButton: '确定',
+            confirmButtonClass: 'btn btn-info',
+            cancelButton: '取消',
+            cancelButtonClass: 'btn btn-danger',
+            animation: 'scaleY',
+            theme: 'material',
+            confirm: function () {
+               $('form').submit();
+            }
+
+        });
+        return false;
+    }
+
+</script>
+{/block}

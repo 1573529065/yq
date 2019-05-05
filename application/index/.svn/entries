@@ -1,0 +1,43 @@
+10
+
+dir
+99
+svn://localhost/magic/application/index
+svn://localhost/magic
+
+
+
+2018-04-11T03:53:28.303613Z
+99
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5a9e3fc1-e3e5-4307-afa4-118d95b29513
+
+model
+dir
+
+controller
+dir
+
+config
+dir
+
+validate
+dir
+
+view
+dir
+
