@@ -31,28 +31,29 @@ class Index extends Admin
     }
     
    
-    public function edit(){
+    public function edit(Request $request){
         if(request()->isPost()) {
             $data = input('post.');
-            $file = request()->file('logo');
-            if (!empty($file)) {//图片存在
-                $info = $file->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads');
-                if (!$info)
-                    $this->error($file->getError(), '', '', 1);
+            $file = $request->file();
+            if (!empty($file['logo'])){ // logo
+                $logo = $request->file('logo');
+                $info = $logo->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads');
+                !$info && $this->error($file->getError(), '', '', 1);
                 $data['logo'] = '/uploads/' . $info->getSaveName();
             }
-           $file1 = request()->file('wx');
-            if (!empty($file1)) {//图片存在
+
+            if (!empty($file['wx'])) {//图片存在
+                $file1 = $request->file('wx');
                 $info1 = $file1->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads');
-                if (!$info)
-                    $this->error($file->getError(), '', '', 1);
-                $data['logo'] = '/uploads/' . $info->getSaveName();
+                !$info1 && $this->error($file->getError(), '', '', 1);
+
+                $data['wx'] = '/uploads/' . $info->getSaveName();
             }
             \app\common\entity\Config::delCache();
             foreach ($data as $key => $v) {
                \app\common\entity\Config::where("key",$key)->update(['value'=>$v]);
             }
-            
+
             $this->success('修改成功','config/index','',1);
         }
     }
