@@ -1,7 +1,9 @@
 <?php
+
 namespace app\admin\controller;
 
 use app\admin\exception\AdminException;
+use app\admin\service\rbac\Users\Service;
 use think\Controller;
 use think\facade\Request;
 
@@ -32,9 +34,9 @@ class Admin extends Controller
 
     public function render($template, $data = [])
     {
-        $service = new \app\admin\service\rbac\Users\Service();
+        $service = new Service();
         $data['manage'] = $service->getManageInfo();
-        $data['menus'] = $this->baseParams();   
+        $data['menus'] = $this->baseParams();
         return $this->fetch($template, $data);
     }
 
@@ -44,5 +46,5 @@ class Admin extends Controller
         $menus = $service->getMenus();
         return $menus;
     }
-   
+
 }

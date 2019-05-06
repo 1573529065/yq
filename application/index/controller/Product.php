@@ -1,4 +1,5 @@
 <?php
+
 namespace app\index\controller;
 
 use app\admin\exception\AdminException;
@@ -22,19 +23,19 @@ class Product extends Base
     public function index(Request $request)
     {
         return $this->fetch('index', [
-            'list' => productModel::order('sort')->where('status',1)->select()
+            'list' => productModel::order('sort')->where('status', 1)->select()
         ]);
     }
-    
-    
-    
+
+
     //购买云矿机
-    public function buy(Request $request){
-       
+    public function buy(Request $request)
+    {
+
         //检测是否添加发货地址
-        $address = Address::where('user_id',$this->userId)->order('add_time desc')->find();
-        if(!$address){
-             return json(['code' => 1, 'message' => '未添加地址']);
+        $address = Address::where('user_id', $this->userId)->order('add_time desc')->find();
+        if (!$address) {
+            return json(['code' => 1, 'message' => '未添加地址']);
         }
         $product_id = $request->post("product_id");
         //得到能量详细信息
@@ -48,77 +49,77 @@ class Product extends Base
         }
         $user = new User();
         //获取用户详细信息
-        $userInfo = $user->where('id',$this->userId)->field('*')->find();
-         //检测是否实名
-        if($userInfo['is_certification'] != User::AUTH_SUCCESS){
+        $userInfo = $user->where('id', $this->userId)->field('*')->find();
+        //检测是否实名
+        if ($userInfo['is_certification'] != User::AUTH_SUCCESS) {
             return json(['code' => 1, 'message' => '请实名认证']);
         }
-        if($userInfo['yue'] < $product['price']){
+        if ($userInfo['yue'] < $product['price']) {
             return json(['code' => 1, 'message' => '余额不足,请充值']);
         }
         //计算上级可获得数量
-        $user_parent = $user->get_parent($userInfo['pid'],$product['price']);
-        $doubles =  Config::getValues(['day_double','sum_double','three_double','kg_double']);
+        $user_parent = $user->get_parent($userInfo['pid'], $product['price']);
+        $doubles = Config::getValues(['day_double', 'sum_double', 'three_double', 'kg_double']);
         //矿机记录
         $user_product = new UserProduct();
         Db::startTrans();
         try {
-            $user->where('id',$this->userId)
-                 ->dec('yue',$product['price'])
-                 ->inc('product_rate',($product->getRate()))
-                 ->inc('three_conf',($product->price*$doubles['three_double']))
-                 ->inc('kg_conf',($product->price*$doubles['kg_double']))
-                 ->inc('everyday_conf',($product->price*$doubles['day_double']))
-                 ->inc('sum_lucre_conf',($product->price*$doubles['sum_double']))
-                 ->update();
-            
+            $user->where('id', $this->userId)
+                ->dec('yue', $product['price'])
+                ->inc('product_rate', ($product->getRate()))
+                ->inc('three_conf', ($product->price * $doubles['three_double']))
+                ->inc('kg_conf', ($product->price * $doubles['kg_double']))
+                ->inc('everyday_conf', ($product->price * $doubles['day_double']))
+                ->inc('sum_lucre_conf', ($product->price * $doubles['sum_double']))
+                ->update();
+
             $user->isUpdate(true)->saveAll($user_parent);
-            
+
             $user_product->createInfo($product, $this->userId, 2);
             //插入订单记录
             ShopOrder::insert([
-                'shop_name'=>$product['product_name'],
-                'shop_price'=>$product['price'],
-                'num'=>1,
-                'payment_type'=>2,
-                'name'=>$address['name'],
-                'address'=>$address['address'],
-                'mobile'=>$address['mobile'],
-                'add_time'=>date('Y-m-d H:i:s'),
-                'user_id'=>$this->userId,
+                'shop_name' => $product['product_name'],
+                'shop_price' => $product['price'],
+                'num' => 1,
+                'payment_type' => 2,
+                'name' => $address['name'],
+                'address' => $address['address'],
+                'mobile' => $address['mobile'],
+                'add_time' => date('Y-m-d H:i:s'),
+                'user_id' => $this->userId,
             ]);
             Db::commit();
         } catch (\Exception $e) {
             Db::rollback();
-            return json(['code' => 1, 'message' =>"购买失败" ]);
+            return json(['code' => 1, 'message' => "购买失败"]);
         }
         UserYueLog::insert([
-            'user_id'=>$this->userId,
-            'yue'=>'-'.$product['price'],
-            'remark'=>"购买".$product['product_name'],
-            'types'=> UserYueLog::TYPE_KG,
-            'create_time'=>date('Y-m-d H:i:s'),
-            'just_yue'=>$product['price']
+            'user_id' => $this->userId,
+            'yue' => '-' . $product['price'],
+            'remark' => "购买" . $product['product_name'],
+            'types' => UserYueLog::TYPE_KG,
+            'create_time' => date('Y-m-d H:i:s'),
+            'just_yue' => $product['price']
         ]);
         $total_log = $magic_log = [];
         foreach ($user_parent as $k => $v) {
             //总业绩 日志
             $total_log[$k] = [
-                'user_id'=>$v['id'],
-                'num'=>$product['price'],
-                'remark'=>"下级{$this->userInfo->mobile}购买矿机",
-                'types'=> UserTotalLog::TYPE_SYSTEM,
-                'create_time'=>time()
+                'user_id' => $v['id'],
+                'num' => $product['price'],
+                'remark' => "下级{$this->userInfo->mobile}购买矿机",
+                'types' => UserTotalLog::TYPE_SYSTEM,
+                'create_time' => time()
             ];
-            if($v['diff'] > 0){
-                $magic_log[$k]=[
-                    'user_id'=>$v['id'],
-                    'magic'=>$v['diff'],
-                    'old'=>0,
-                    'new'=>0,
-                    'remark'=>'推荐奖励',
-                    'types'=> UserMagicLog::TYPE_REWARD,
-                    'create_time'=>time()
+            if ($v['diff'] > 0) {
+                $magic_log[$k] = [
+                    'user_id' => $v['id'],
+                    'magic' => $v['diff'],
+                    'old' => 0,
+                    'new' => 0,
+                    'remark' => '推荐奖励',
+                    'types' => UserMagicLog::TYPE_REWARD,
+                    'create_time' => time()
                 ];
             }
         }
@@ -126,14 +127,13 @@ class Product extends Base
         UserTotalLog::insertAll($total_log);
         return json(['code' => 0, 'message' => '购买成功']);
     }
-    
 
 
     /**
      * 购买能量
      */
     public function recharge(Request $request)
-    {   
+    {
         $product_id = $request->post("product_id");
         //得到能量详细信息
         $productModel = new productModel();
@@ -236,7 +236,7 @@ class Product extends Base
                     //查询出父级最小等级的能量
                     $moreBox = UserProduct::where("product_id", "ELT", $product_id)->where("user_id", $userInfo['pid'])->order("product_id desc")->select();
                     $minbox = $moreBox[0] ?? 0;
-                    if($minbox){
+                    if ($minbox) {
                         $product_min = $productModel->getInfoById($minbox->product_id);
                         //父级最小能量价格*后台设置的直推奖励百分比的能量
                         $userInfo_p->magic = $userInfo_p->magic + ($val / 100) * $product_min['price'];
@@ -247,7 +247,7 @@ class Product extends Base
                 if ($userInfo_p->save() === false) {
                     throw new \Exception('增加父级能量数量失败');
                 }
-                if(isset($price) && $price > 0){
+                if (isset($price) && $price > 0) {
                     //增加父级能量流水记录
                     $resp = $user_magic_log->addInfo($userInfo_p->id, UserMagicLog::TYPE_REWARD, $price * ($val / 100), $old_magic, $userInfo_p->magic, 4);
                     if (!$resp) {
@@ -270,5 +270,5 @@ class Product extends Base
             return json(['code' => 1, 'message' => $e->getMessage()]);
         }
     }
-    
+
 }

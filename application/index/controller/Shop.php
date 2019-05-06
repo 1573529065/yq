@@ -16,61 +16,65 @@ use app\common\entity\YueOrders;
 use app\common\service\Market\Auth;
 use Think\Db;
 
-class Shop extends Base {
-    
-        public function initialize(){
-           parent::initialize();
-            if(in_array(request()->url(),['/index/shop/shop_market','/index/shop/add_buy_market','/index/shop/add_sale','/index/shop/sale','/index/shop/buy'])){
-                  $start = explode('|',Config::getValue('yue_start_time'));
-                  $startTime = strtotime(date('Y-m-d') . ' ' . $start[0]);
-                   $endTime = strtotime(date('Y-m-d') . ' ' . $start[1]);
-                   //开市时间
-                   if( (time() < $startTime) || (time() > $endTime)){
-                      return alert('交易市场已关闭！', url('/index'));
-                   }
-                   //检测是否实名
-                   if($this->userInfo->is_certification != User::AUTH_SUCCESS){
-                       return alert('未实名！', url('/index'));
-                   }
-                   
+class Shop extends Base
+{
+
+    public function initialize()
+    {
+        parent::initialize();
+        if (in_array(request()->url(), ['/index/shop/shop_market', '/index/shop/add_buy_market', '/index/shop/add_sale', '/index/shop/sale', '/index/shop/buy'])) {
+            $start = explode('|', Config::getValue('yue_start_time'));
+            $startTime = strtotime(date('Y-m-d') . ' ' . $start[0]);
+            $endTime = strtotime(date('Y-m-d') . ' ' . $start[1]);
+            //开市时间
+            if ((time() < $startTime) || (time() > $endTime)) {
+                return alert('交易市场已关闭！', url('/index'));
             }
-            
+            //检测是否实名
+            if ($this->userInfo->is_certification != User::AUTH_SUCCESS) {
+                return alert('未实名！', url('/index'));
+            }
+
         }
 
+    }
+
     //商城首页
-    public function index() {
-        $click = input('id') ?? ShopList::where('is_show',1)->field('id')->find()['id'];
+    public function index()
+    {
+        $click = input('id') ?? ShopList::where('is_show', 1)->field('id')->find()['id'];
 //        $pudg = Config::getValue('shop_pudg');
         $shop = new ShopList();
 //        $yue = User::field('magic')->where('id', $this->userId)->find();
-        $list = $shop->field('id,name')->where(['is_show' => 1,'pid'=>0])->select()->toArray();
-        $pid = input('pid')? input('pid'):$click;
-        $list_two = $shop->field('id,name')->where('is_show = 1 and pid = :pid',['pid'=>$click])
-                         ->select()
-                         ->toArray();
-       
+        $list = $shop->field('id,name')->where(['is_show' => 1, 'pid' => 0])->select()->toArray();
+        $pid = input('pid') ? input('pid') : $click;
+        $list_two = $shop->field('id,name')->where('is_show = 1 and pid = :pid', ['pid' => $click])
+            ->select()
+            ->toArray();
+
         //相等说明是全部
-        if($pid == $click){
-            $type = $pid.',';
-            foreach($list_two as $v){
-                $type .= $v['id'].',';
+        if ($pid == $click) {
+            $type = $pid . ',';
+            foreach ($list_two as $v) {
+                $type .= $v['id'] . ',';
             }
             $type = trim($type, ',');
-        }else{
+        } else {
             $type = $pid;
         }
-        
+
         $detail_list = ShopDetail::field('*')
-                        ->where("is_del=1 and type in ({$type})")
-                        ->paginate(20, false, [
-                            'query' => ['id' => $click,'pid'=>$pid]
-                        ]);
-        return $this->fetch('index', compact(array('list', 'click', 'detail_list','list_two','pid')));
+            ->where("is_del=1 and type in ({$type})")
+            ->paginate(20, false, [
+                'query' => ['id' => $click, 'pid' => $pid]
+            ]);
+        return $this->fetch('index', compact(array('list', 'click', 'detail_list', 'list_two', 'pid')));
     }
 
     //详情页
-    public function detail() {
-         $id = input('get.id');
+    public function detail()
+    {
+        $id = input('get.id');
         if (empty($id))
             return $this->redirect('index');
         $pudg = Config::getValue('shop_pudg');
@@ -82,19 +86,20 @@ class Shop extends Base {
         return $this->fetch('detail', ['list' => $list, 'pudg' => $pudg, 'info' => $info]);
     }
 
-      //购买商品
-    public function add_detail() {
+    //购买商品
+    public function add_detail()
+    {
         if (!\request()->isPost())
             return $this->redirect('index');
         $data = input('post.');
         if (empty($data))
             return json(['code' => 400, 'msg' => '数据错误！']);
         //检测是否添加发货地址
-        $address = Address::where('user_id',$this->userId)->order('add_time desc')->find();
-        if(!$address){
-             return json(['code' => 400, 'msg' => '未添加地址']);
+        $address = Address::where('user_id', $this->userId)->order('add_time desc')->find();
+        if (!$address) {
+            return json(['code' => 400, 'msg' => '未添加地址']);
         }
-         $auth = new Auth();
+        $auth = new Auth();
         if (!$auth->check($data['psw'])) {
             return json(['code' => 400, 'msg' => '密码错误']);
         }
@@ -109,7 +114,7 @@ class Shop extends Base {
 //        if($info['yu_level'] < $list['level']){
 //            return json(['code' => 400, 'msg' => '等级不足,无法购买！']);
 //        }
-        
+
 //        $start = date('Y-m-d').' 00:00:00';
 //        $end = date('Y-m-d', strtotime('+1 day')).' 00:00:00';
 //        $count = ShopOrder::where('shop_id',$list['id'])
@@ -132,7 +137,7 @@ class Shop extends Base {
 //        if($month_count > $list['month_limit']){
 //            return json(['code' => 400, 'msg' => '超过每月限购数量！']);
 //        }
-        
+
         if ($data['mode'] == 3) {//付款方式
             $price = $list['price_xuni'] * $data['num'];
             $pudg_price = round($pudg * $list['price_xuni'] * $data['num'], 2);
@@ -144,7 +149,7 @@ class Shop extends Base {
             $field = 'magic';
             $type = \app\common\entity\UserMagicLog::TYPE_SHOP;
         }
-        
+
         $total = $price + $pudg_price;
         if ($info[$field] < $total)
             return json(['code' => 400, 'msg' => 'RCRC不足！']);
@@ -175,31 +180,31 @@ class Shop extends Base {
             return json(['code' => 400, 'msg' => '系统错误,请重试！']);
         }
 
-        
-      
-            $userMagicLog = new \app\common\entity\UserMagicLog();
-            //插入MBO余额日志
-            $userMagicLog->save([
-                'user_id' => $this->userId,
-                'magic' => '-' . $total,
-                'old' => $info[$field],
-                'new' => ($info[$field] - $total),
-                'remark' => $userMagicLog->getType(8),
-                'type' => $type,
-                'create_time' => time()
-            ]);
-        
-            
+
+        $userMagicLog = new \app\common\entity\UserMagicLog();
+        //插入MBO余额日志
+        $userMagicLog->save([
+            'user_id' => $this->userId,
+            'magic' => '-' . $total,
+            'old' => $info[$field],
+            'new' => ($info[$field] - $total),
+            'remark' => $userMagicLog->getType(8),
+            'type' => $type,
+            'create_time' => time()
+        ]);
+
+
         return json(['code' => 200, 'msg' => '购买成功！']);
     }
-    
-    public function order_list() {
+
+    public function order_list()
+    {
         $list = ShopOrder::field('o.*,s.id as sid,s.img')->alias('o')
-                ->where(['o.user_id' => $this->userId])
-                ->Leftjoin('shop_detail s', 'o.shop_id = s.id')
-                ->order('o.id desc')
-                ->paginate(10);
-       
+            ->where(['o.user_id' => $this->userId])
+            ->Leftjoin('shop_detail s', 'o.shop_id = s.id')
+            ->order('o.id desc')
+            ->paginate(10);
+
         return $this->fetch('order_list', compact(['list']));
     }
 
@@ -215,7 +220,8 @@ class Shop extends Base {
 //    }
 
     //添加买入余额交易订单
-    public function add_buy_market() {
+    public function add_buy_market()
+    {
         if (!request()->isPost())
             return $this->redirect('shop_market');
         $data = input('post.');
@@ -225,12 +231,12 @@ class Shop extends Base {
         if (YueOrders::isExist($this->userId))
             return json(['code' => 403, 'msg' => '请完成交易后再发布！']);
         $re = YueOrders::insert([
-                    'user_id' => $this->userId,
-                    'number' => $data['yue'],
-                    'create_time' => time(),
-                    'status' => 1,
-                    'types' => 1,
-                    'total_price_china' => round(abs($data['rmb']), 2)
+            'user_id' => $this->userId,
+            'number' => $data['yue'],
+            'create_time' => time(),
+            'status' => 1,
+            'types' => 1,
+            'total_price_china' => round(abs($data['rmb']), 2)
         ]);
         if ($re)
             return json(['code' => 200, 'msg' => "买入成功!", 'toUrl' => url('buy_list')]);
@@ -239,35 +245,39 @@ class Shop extends Base {
     }
 
     //添加卖出余额交易订单
-    public function add_sell_market() {
+    public function add_sell_market()
+    {
         if (!request()->isPost())
             return $this->redirect('shop_market');
     }
 
     //余额买入订单列表
-    public function buy_list() {
+    public function buy_list()
+    {
         $list = YueOrders::field('*')->where([
-                    'user_id' => $this->userId,
-                    'types' => YueOrders::TYPE_BUY,
-                    'status' => YueOrders::STATUS_DEFAULT,
-                    'is_del' => 0
-                ])->find();
+            'user_id' => $this->userId,
+            'types' => YueOrders::TYPE_BUY,
+            'status' => YueOrders::STATUS_DEFAULT,
+            'is_del' => 0
+        ])->find();
         return $this->fetch('', ['list' => $list]);
     }
 
     //余额卖出订单列表
-    public function sale_list() {
+    public function sale_list()
+    {
         $list = YueOrders::field('*')->where([
-                    'user_id' => $this->userId,
-                    'types' => YueOrders::TYPE_SALE,
-                    'status' => YueOrders::STATUS_DEFAULT,
-                    'is_del' => 0
-                ])->find();
+            'user_id' => $this->userId,
+            'types' => YueOrders::TYPE_SALE,
+            'status' => YueOrders::STATUS_DEFAULT,
+            'is_del' => 0
+        ])->find();
         return $this->fetch('', ['list' => $list]);
     }
 
     //订单软删除
-    public function yue_order_del() {
+    public function yue_order_del()
+    {
         if (!request()->isPost())
             return $this->redirect('yue_order_index');
 
@@ -308,7 +318,8 @@ class Shop extends Base {
     }
 
     //取消交易
-    public function order_del() {
+    public function order_del()
+    {
         if (!request()->isPost())
             return $this->redirect('trade_list');
         $data = input('post.');
@@ -341,32 +352,35 @@ class Shop extends Base {
     }
 
     //余额求购列表
-    public function yue_buy_list() {
+    public function yue_buy_list()
+    {
 
         $list = YueOrders::where("y.user_id <> {$this->userId} and y.status = 1 and y.types=1 and is_del = 0 and u.status=1")
-                ->alias('y')
-                ->field("u.avatar,u.nick_name,y.id,y.number,y.total_price_china,(select count(id) from yue_orders where status = 4 and (user_id = $this->userId or target_user_id=$this->userId)) as amount")
-                ->join('user u', 'u.id = y.user_id')
-                ->select();
+            ->alias('y')
+            ->field("u.avatar,u.nick_name,y.id,y.number,y.total_price_china,(select count(id) from yue_orders where status = 4 and (user_id = $this->userId or target_user_id=$this->userId)) as amount")
+            ->join('user u', 'u.id = y.user_id')
+            ->select();
         if ($list)
             return json(['code' => 200, 'data' => $list]);
         return json(['code' => 400]);
     }
 
     //余额出售列表
-    public function yue_sale_list() {
+    public function yue_sale_list()
+    {
         $list = YueOrders::where("y.user_id <> {$this->userId} and y.status = 1 and y.types=2 and is_del = 0 and u.status=1")
-                            ->alias('y')
-                            ->field("u.avatar,u.nick_name,y.id,y.number,y.total_price_china,(select count(id) from yue_orders where status = 4 and (user_id = $this->userId or target_user_id=$this->userId)) as amount")
-                            ->join('user u', 'u.id = y.user_id')
-                            ->select();
+            ->alias('y')
+            ->field("u.avatar,u.nick_name,y.id,y.number,y.total_price_china,(select count(id) from yue_orders where status = 4 and (user_id = $this->userId or target_user_id=$this->userId)) as amount")
+            ->join('user u', 'u.id = y.user_id')
+            ->select();
         if ($list)
             return json(['code' => 200, 'data' => $list]);
         return json(['code' => 400]);
     }
 
     //余额出售
-    public function buy() {
+    public function buy()
+    {
         if (!request()->isPost())
             return $this->redirect('shop_market');
         $data = input('post.');
@@ -412,7 +426,8 @@ class Shop extends Base {
     }
 
     //买入
-    public function sale() {
+    public function sale()
+    {
         if (!request()->isPost())
             return $this->redirect('shop_market');
         $data = input('post.');
@@ -440,7 +455,8 @@ class Shop extends Base {
     }
 
     //卖出
-    public function add_sale() {
+    public function add_sale()
+    {
         if (!request()->isPost())
             return $this->redirect('shop_market');
         $data = input('post.');
@@ -481,24 +497,26 @@ class Shop extends Base {
     }
 
     //余额交易中订单列表
-    public function trade_list() {
+    public function trade_list()
+    {
         $list = YueOrders::field('*')->where([
-                    'user_id' => $this->userId,
-                    'is_del' => 0
-                ])->where('status', 'in', '2,3')->find();
+            'user_id' => $this->userId,
+            'is_del' => 0
+        ])->where('status', 'in', '2,3')->find();
         $type_id = 'target_user_id';
         if (empty($list)) {
             $type_id = 'user_id';
             $list = YueOrders::field('*')->where([
-                        'target_user_id' => $this->userId,
-                        'is_del' => 0
-                    ])->where('status', 'in', '2,3')->find();
+                'target_user_id' => $this->userId,
+                'is_del' => 0
+            ])->where('status', 'in', '2,3')->find();
         }
         return $this->fetch('', ['list' => $list, 'user_id' => $this->userId, 'type_id' => $type_id]);
     }
 
     //交易中详情页
-    public function trade_detail() {
+    public function trade_detail()
+    {
         $data = input('get.');
         $list = YueOrders::where('id=:id and is_del = 0', ['id' => [$data['id'], \PDO::PARAM_INT]])->find();
 
@@ -534,7 +552,8 @@ class Shop extends Base {
     }
 
     //上传、修改凭证
-    public function upImg() {
+    public function upImg()
+    {
         $file = request()->file('image');
         // 移动到框架应用根目录/uploads/ 目录下
         $info = $file->validate(['size' => 1048576, 'ext' => 'jpg,png,gif'])->move('../public/uploads/yueimg/');
@@ -555,7 +574,8 @@ class Shop extends Base {
      * 确认付款
      * 确认收款
      */
-    public function payment() {
+    public function payment()
+    {
         $id = input('post.id');
         $type = input('post.type');
         $info = YueOrders::where('id=:id and is_del = 0', ['id' => [$id, \PDO::PARAM_INT]])->field('number,user_id,status,target_user_id,charge_number,bond')->find();
@@ -600,14 +620,14 @@ class Shop extends Base {
                 $yue = $info['number'] + $info['charge_number'];
                 $userYueLog = new UserYueLog();
                 $data = [[
-                'user_id' => $this->userId,
-                'yue' => '-' . $yue,
-                'types' => 8,
-                'remark' => '余额卖出',
-                'create_time' => date('Y-m-d H:i:s'),
-                'just_yue' => $yue
-                    ],
-                        [
+                    'user_id' => $this->userId,
+                    'yue' => '-' . $yue,
+                    'types' => 8,
+                    'remark' => '余额卖出',
+                    'create_time' => date('Y-m-d H:i:s'),
+                    'just_yue' => $yue
+                ],
+                    [
                         'user_id' => $user_id,
                         'yue' => $info['number'],
                         'types' => 9,
@@ -629,13 +649,15 @@ class Shop extends Base {
     /**
      * 已完成列表
      */
-    public function complete_list() {
+    public function complete_list()
+    {
         $list = YueOrders::where("is_del = 0 and status =" . YueOrders::STATUS_FINISH . " and (user_id = {$this->userId} or target_user_id = {$this->userId})")->order('id desc')->paginate(20);
         return $this->fetch('', ['list' => $list, 'user_id' => $this->userId]);
     }
 
     //完成列表详情
-    public function complete_details() {
+    public function complete_details()
+    {
         $id = input('get.id');
         $info = YueOrders::where('id = :id and is_del = 0', ['id' => [$id, \PDO::PARAM_INT]])->find();
         //判断存在
@@ -654,37 +676,38 @@ class Shop extends Base {
         $userInfo = User::where('id', $user_id)->find();
 
 
-
         return $this->fetch('', ['order' => $info, 'userInfo' => $userInfo]);
     }
+
     /**
      * 确认收货
      */
-    public function collect_goods() {
+    public function collect_goods()
+    {
         if (!request()->isPost())
             return $this->redirect('order_list');
         $id = input('post.id');
-        if(empty($id))  return json(['code' => 500, 'msg' => 'error！']);
+        if (empty($id)) return json(['code' => 500, 'msg' => 'error！']);
         $shopOrder = new ShopOrder();
         $shopData = $shopOrder->where("id=:id and user_id = :user_id and status=:status and is_del = 0",
-                    ['id' => [$id, \PDO::PARAM_INT],'user_id'=>$this->userId,'status'=>$shopOrder::STATUS_TWO])
-                    ->find();
-        if(!$shopData){
+            ['id' => [$id, \PDO::PARAM_INT], 'user_id' => $this->userId, 'status' => $shopOrder::STATUS_TWO])
+            ->find();
+        if (!$shopData) {
             return json(['code' => 500, 'msg' => 'error！']);
         }
         $shopDetail = ShopDetail::where("id ={$shopData['shop_id']} and is_del = 1")->find();
-        if(!$shopDetail || ($shopDetail['is_back'] == 0)){
+        if (!$shopDetail || ($shopDetail['is_back'] == 0)) {
             $suanli = 0;
-        }else{
+        } else {
             $suanli = $shopDetail['power_num'];
         }
         $data['collect_time'] = date('Y-m-d H:i:s');
         $data['status'] = $shopOrder::STATUS_THREE;
         Db::startTrans();
         try {
-          $shopOrder->where("id = {$shopData['id']}")->update($data);
-          //更新用户算力
-          User::where('id',$this->userId)->inc('product_rate',$suanli)->update();
+            $shopOrder->where("id = {$shopData['id']}")->update($data);
+            //更新用户算力
+            User::where('id', $this->userId)->inc('product_rate', $suanli)->update();
             // 提交事务
             Db::commit();
         } catch (\Exception $e) {
@@ -692,8 +715,8 @@ class Shop extends Base {
             Db::rollback();
             return json(['code' => 501, 'msg' => "收货失败！"]);
         }
-            return json(['code' => 200, 'msg' => '收货成功！']);
-        
+        return json(['code' => 200, 'msg' => '收货成功！']);
+
     }
 
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace app\index\controller;
 
 use app\common\entity\Config;
@@ -21,13 +22,13 @@ class Market extends Base
     public function index()
     {
         $marketPrice = new MarketPrice();
-        $prices      = $marketPrice->getCurrentPrice();
+        $prices = $marketPrice->getCurrentPrice();
 
         $magic = User::where('id', $this->userId)->value('magic');
 
         //获取24小时交易量和交易额
         $marketNumber = Config::getValue('market_day_total');
-        $marketTotal  = Config::getValue('market_day_magic');
+        $marketTotal = Config::getValue('market_day_magic');
 
         if (!$marketNumber) {
             //统计
@@ -38,13 +39,13 @@ class Market extends Base
             $marketTotal = Orders::where('create_time', '>=', time() - 24 * 3600)->sum('number');
         }
         return $this->fetch('index', [
-            'prices'            => $prices,
+            'prices' => $prices,
             'market_price_rate' => Config::getValue('market_rate'),
-            'number_min'        => Config::getValue('market_min'),
-            'number_max'        => Config::getValue('market_max'),
-            'magic'             => $magic,
-            'market_number'     => $marketNumber ?: 0,
-            'market_total'      => $marketTotal ?: 0,
+            'number_min' => Config::getValue('market_min'),
+            'number_max' => Config::getValue('market_max'),
+            'magic' => $magic,
+            'market_number' => $marketNumber ?: 0,
+            'market_total' => $marketTotal ?: 0,
         ]);
     }
 
@@ -152,7 +153,7 @@ class Market extends Base
                 return json(['code' => 1, 'message' => $validate]);
             }
 
-            $model  = new \app\index\model\Market();
+            $model = new \app\index\model\Market();
             $result = $model->sale($request->post('price'), $request->post('number'), $this->userId);
 
             if ($result) {
@@ -170,7 +171,7 @@ class Market extends Base
         if ($request->isPost()) {
 
             $orderId = intval($request->post('order_id'));
-            $model   = new \app\index\model\Market();
+            $model = new \app\index\model\Market();
 
             try {
                 $model->checkSaleTa($orderId, $this->userId);
@@ -225,17 +226,17 @@ class Market extends Base
     //求购列表
     public function buyList(Request $request)
     {
-        $page   = $request->get('page', 1);
-        $limit  = $request->get('limit', 20);
+        $page = $request->get('page', 1);
+        $limit = $request->get('limit', 20);
         $mobile = $request->get('mobile', '');
 
         $model = new \app\index\model\Market();
-        $list  = $model->getList(Orders::TYPE_BUY, $this->userId, $page, $limit, $mobile);
+        $list = $model->getList(Orders::TYPE_BUY, $this->userId, $page, $limit, $mobile);
 
         return json([
-            'code'    => 0,
+            'code' => 0,
             'message' => 'success',
-            'data'    => $list,
+            'data' => $list,
         ]);
     }
 
@@ -243,17 +244,17 @@ class Market extends Base
 
     public function saleList(Request $request)
     {
-        $page  = $request->get('page', 1);
+        $page = $request->get('page', 1);
         $limit = $request->get('limit', 20);
 
-        $model  = new \app\index\model\Market();
+        $model = new \app\index\model\Market();
         $mobile = $request->get('mobile', '');
-        $list   = $model->getList(Orders::TYPE_SALE, $this->userId, $page, $limit, $mobile);
+        $list = $model->getList(Orders::TYPE_SALE, $this->userId, $page, $limit, $mobile);
 
         return json([
-            'code'    => 0,
+            'code' => 0,
             'message' => 'success',
-            'data'    => $list,
+            'data' => $list,
         ]);
     }
 }

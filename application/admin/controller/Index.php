@@ -1,4 +1,5 @@
 <?php
+
 namespace app\admin\controller;
 
 use app\admin\exception\AdminException;
@@ -17,25 +18,31 @@ class Index extends Admin
 {
     public function index()
     {
-       $config = [
+        $config = [
             '操作系统' => PHP_OS,
             '服务器时间' => date("Y-n-j H:i:s"),
             'PHP版本号' => PHP_VERSION,
             '运行环境' => $_SERVER["SERVER_SOFTWARE"],
             'PHP运行方式' => php_sapi_name(),
             '上传附件限制' => ini_get('upload_max_filesize'),
-            '执行时间限制' => ini_get('max_execution_time').'秒',
+            '执行时间限制' => ini_get('max_execution_time') . '秒',
         ];
 
-        return $this->render('index',['config'=>$config]);
+        return $this->render('index', ['config' => $config]);
     }
-    
-   
-    public function edit(Request $request){
-        if(request()->isPost()) {
+
+    /**
+     * 系统配置-网站配置
+     * @param Request $request
+     * @throws \think\Exception
+     * @throws \think\exception\PDOException
+     */
+    public function edit(Request $request)
+    {
+        if (request()->isPost()) {
             $data = input('post.');
             $file = $request->file();
-            if (!empty($file['logo'])){ // logo
+            if (!empty($file['logo'])) { // logo
                 $logo = $request->file('logo');
                 $info = $logo->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads');
                 !$info && $this->error($file->getError(), '', '', 1);
@@ -51,10 +58,10 @@ class Index extends Admin
             }
             \app\common\entity\Config::delCache();
             foreach ($data as $key => $v) {
-               \app\common\entity\Config::where("key",$key)->update(['value'=>$v]);
+                \app\common\entity\Config::where("key", $key)->update(['value' => $v]);
             }
 
-            $this->success('修改成功','config/index','',1);
+            $this->success('修改成功', 'config/index', '', 1);
         }
     }
 
@@ -69,7 +76,7 @@ class Index extends Admin
 //            }
 
             //判断原密码是否相等
-            $model = new \app\admin\service\rbac\Users\Service();
+            $model = new Service();
             $user = ManageUser::where('id', $model->getManageId())->find();
             $oldPassword = $model->checkPassword($request->post('old_password'), $user);
             if (!$oldPassword) {
@@ -146,10 +153,11 @@ SQL;
         //清除所有session
         Session::destroy();
     }
-    
-    public function recharge(Request $request){
-       
-         $entity =  Recharge::get_all()->alias('r')->field('r.*,u.mobile,u.nick_name');
+
+    public function recharge(Request $request)
+    {
+
+        $entity = Recharge::get_all()->alias('r')->field('r.*,u.mobile,u.nick_name');
         if ($level = $request->get('status')) {
             $entity->where('r.status', $level);
             $map['status'] = $level;
@@ -159,128 +167,130 @@ SQL;
             $map['keyword'] = $keyword;
         }
         $list = $entity->leftJoin("user u", 'u.id = r.user_id')
-                ->order('r.id', 'desc')
-                ->paginate(15, false, [
-            'query' => isset($map) ? $map : []
-        ]);
+            ->order('r.id', 'desc')
+            ->paginate(15, false, [
+                'query' => isset($map) ? $map : []
+            ]);
 
         return $this->render('recharge', [
-                    'list' => $list
+            'list' => $list
         ]);
     }
-    
+
     //充值-审核通过
-    public function recharge_via(){
+    public function recharge_via()
+    {
         $id = input('get.id');
         $num = Recharge::get_all()
-                ->where("id=:id and status=:status",['id' => [$id, \PDO::PARAM_INT],'status'=> Recharge::STATUS_ONE])
-                ->field('id,user_id,num')
-                ->find();
-        if(!$num){
-             return json(['code' => 1, 'message' => 'error']);
+            ->where("id=:id and status=:status", ['id' => [$id, \PDO::PARAM_INT], 'status' => Recharge::STATUS_ONE])
+            ->field('id,user_id,num')
+            ->find();
+        if (!$num) {
+            return json(['code' => 1, 'message' => 'error']);
         }
-        $result = Recharge::where('id',$num['id'])
-                ->update(['status'=> Recharge::STATUS_TWO,'update_time'=>time()]);
-        if(!$result){
+        $result = Recharge::where('id', $num['id'])
+            ->update(['status' => Recharge::STATUS_TWO, 'update_time' => time()]);
+        if (!$result) {
             return json(['code' => 1, 'message' => '更新失败']);
         }
-        User::where('id',$num['user_id'])->inc('yue',$num['num'])->update();
+        User::where('id', $num['user_id'])->inc('yue', $num['num'])->update();
 //        if(!$user){
 //            return json(['code' => 1, 'message' => '用户余额更新失败,请手动添加']);
 //        }
         UserYueLog::insert([
-            'user_id'=>$num['user_id'],
-            'yue'=>$num['num'],
-            'remark'=>'系统充值',
-            'types'=> UserYueLog::TYPE_SYSTEM,
-            'create_time'=>date('Y-m-d'),
-            'just_yue'=>$num['num']
+            'user_id' => $num['user_id'],
+            'yue' => $num['num'],
+            'remark' => '系统充值',
+            'types' => UserYueLog::TYPE_SYSTEM,
+            'create_time' => date('Y-m-d'),
+            'just_yue' => $num['num']
         ]);
         return json(['code' => 0, 'message' => '审核通过']);
     }
-    
+
     //充值-驳回
-    public function recharge_reject(){
-        if(request()->isPost()){
+    public function recharge_reject()
+    {
+        if (request()->isPost()) {
             $data = input('post.');
-            $result = Recharge::where('id=:id',['id' => [$data['id'], \PDO::PARAM_INT]])
-                        ->update(['remark'=>$data['remark'],'update_time'=>time(),'status'=> Recharge::STATUS_THREE]);
-            if(!$result){
-                return json(['code'=>500,'msg'=>'驳回失败']);
+            $result = Recharge::where('id=:id', ['id' => [$data['id'], \PDO::PARAM_INT]])
+                ->update(['remark' => $data['remark'], 'update_time' => time(), 'status' => Recharge::STATUS_THREE]);
+            if (!$result) {
+                return json(['code' => 500, 'msg' => '驳回失败']);
             }
-            return json(['code'=>200,'msg'=>'驳回成功']);
+            return json(['code' => 200, 'msg' => '驳回成功']);
         }
     }
-    
+
     //充值--删除
-    public function recharge_del(){
+    public function recharge_del()
+    {
         $id = input('id');
-        $result = Recharge::where('id =:id',['id' => [$id, \PDO::PARAM_INT]])->update(['is_del'=>0]);
-        if($result === false){
-             return json(['code' => 1, 'message' => '删除失败']);
+        $result = Recharge::where('id =:id', ['id' => [$id, \PDO::PARAM_INT]])->update(['is_del' => 0]);
+        if ($result === false) {
+            return json(['code' => 1, 'message' => '删除失败']);
         }
         return json(['code' => 0, 'message' => '删除成功']);
     }
-    
+
     /**
      * 二维码管理
      */
-    public function recharge_list(){
-        
-       $list =  RechargeList::order('create_time desc')
-                ->paginate(15);
-         return $this->render('recharge_list', [
-                    'list' => $list
+    public function recharge_list()
+    {
+
+        $list = RechargeList::order('create_time desc')
+            ->paginate(15);
+        return $this->render('recharge_list', [
+            'list' => $list
         ]);
     }
-    
-    
+
+
     /**
      * 添加二维码
      */
-    public function recharge_add(){
+    public function recharge_add()
+    {
         $rl = new RechargeList();
-        if(request()->isPost()){
+        if (request()->isPost()) {
             $data = input('post.');
-            if(empty($data['id'])){
-            // 获取表单上传文件 例如上传了001.jpg
-            $file = request()->file('zfb');
-            $file2 = request()->file('wx');
-            if(empty($file) || empty($file2)){
-                $this->error('缺少图片', '', '', 1);
+            if (empty($data['id'])) {
+                // 获取表单上传文件 例如上传了001.jpg
+                $file = request()->file('zfb');
+                $file2 = request()->file('wx');
+                if (empty($file) || empty($file2)) {
+                    $this->error('缺少图片', '', '', 1);
+                }
+                // 移动到框架应用根目录/uploads/ 目录下
+                $info = $file->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads/shop');
+                // 移动到框架应用根目录/uploads/ 目录下
+                $info2 = $file2->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads/shop');
+                if (!$info)
+                    $this->error($file->getError(), '', '', 1);
+                if (!$info2)
+                    $this->error($file2->getError(), '', '', 1);
+                $data['zfb'] = '/uploads/shop/' . $info->getSaveName();
+                $data['wx'] = '/uploads/shop/' . $info2->getSaveName();
             }
-            // 移动到框架应用根目录/uploads/ 目录下
-            $info = $file->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads/shop');
-            // 移动到框架应用根目录/uploads/ 目录下
-            $info2 = $file2->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads/shop');
-            if (!$info)
-                $this->error($file->getError(), '', '', 1);
-            if(!$info2)
-                 $this->error($file2->getError(), '', '', 1);
-            $data['zfb'] = '/uploads/shop/' . $info->getSaveName();
-            $data['wx'] = '/uploads/shop/' . $info2->getSaveName();
-            }
-            if(empty($data['id'])){
-               $result = $rl->save($data);
-            }else{
+            if (empty($data['id'])) {
+                $result = $rl->save($data);
+            } else {
                 $result = $rl->isUpdate(true)->save($data);
             }
-            if($result){
-                 $this->success('成功', 'recharge_list', '', 1);
+            if ($result) {
+                $this->success('成功', 'recharge_list', '', 1);
             }
-             $this->error('失败', '', '', 1);
-            
+            $this->error('失败', '', '', 1);
+
         }
         $list = [];
         $id = input('id');
-        if(!empty($id)){
-            $list = $rl->where("id = :id",['id' => [$id, \PDO::PARAM_INT]])->find();
+        if (!empty($id)) {
+            $list = $rl->where("id = :id", ['id' => [$id, \PDO::PARAM_INT]])->find();
         }
-         return $this->render('recharge_add',['list'=>$list]);
+        return $this->render('recharge_add', ['list' => $list]);
     }
-    
-    
-    
-    
-    
+
+
 }
