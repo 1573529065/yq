@@ -18,10 +18,13 @@ class Certificate extends Admin
     }
 
     //添加证书
-    public function certificate_add()
+    public function certificate_add(Request $request)
     {
         if (request()->isPost()) {
             $data = input('post.');
+            $file = $request->file();
+            if (empty($file)) $this->error('图片不能为空','','', 1);
+
             $file = request()->file('img');
             if (!$file) {
                 $this->error('添加失败', '', '', 1);
