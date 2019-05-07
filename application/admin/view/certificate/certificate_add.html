@@ -89,9 +89,7 @@
         title = $("input[name='title']").val();
         content = $("#content").val();
         img = $("#img").val();
-        console.log(img);
-        // return false;
-        if (!title || !content || empty(img)) {
+        if (!title || !content) {
             $.alert({
                 title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
                 content: "请填写完整！",
@@ -99,9 +97,21 @@
                 confirmButtonClass: 'btn btn-info',
                 animation: 'scaleY',
                 theme: 'material'
-            })
+            });
             return false;
         }
+        if (!img) {
+            $.alert({
+                title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+                content: "图片不能为空！",
+                confirmButton: '确定',
+                confirmButtonClass: 'btn btn-info',
+                animation: 'scaleY',
+                theme: 'material'
+            });
+            return false;
+        }
+        // return false;
         $.confirm({
             title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
             content: '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">确定提交？</div>',

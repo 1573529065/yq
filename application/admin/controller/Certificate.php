@@ -25,14 +25,15 @@ class Certificate extends Admin
             $file = $request->file();
             if (empty($file)) $this->error('图片不能为空','','', 1);
 
-            $file = request()->file('img');
+            $file = $file['img'];
             if (!$file) {
                 $this->error('添加失败', '', '', 1);
             }
             // 移动到框架应用根目录/uploads/ 目录下
             $info = $file->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads');
-            if (!$info)
+            if (!$info){
                 $this->error($file->getError(), '', '', 1);
+            }
             $img = '/uploads/' . $info->getSaveName();
             $data['img'] = $img;
 
