@@ -47,5 +47,64 @@ class Index extends Base
         ]);
     }
 
+    /**
+     * 培训课程
+     */
+    public function train()
+    {
+        return $this->fetch('train', [
+            'bs' => '培训课程'
+        ]);
+    }
+
+    /**
+     * 学员生活
+     */
+    public function life()
+    {
+        return $this->fetch('life', [
+            'bs' => '学员生活'
+        ]);
+    }
+
+    /**
+     * 舰队介绍
+     */
+    public function fleet()
+    {
+        return $this->fetch('fleet', [
+            'bs' => '舰队介绍'
+        ]);
+    }
+
+    /**
+     * 新闻动态
+     */
+    public function news()
+    {
+        return $this->fetch('news', [
+            'bs' => '新闻动态'
+        ]);
+    }
+
+    /**
+     * 新闻详情
+     */
+    public function news_det()
+    {
+        return $this->fetch('news_det', [
+            'bs' => '新闻动态'
+        ]);
+    }
+
+    /**
+     * 关于我们
+     */
+    public function about()
+    {
+        return $this->fetch('about', [
+            'bs' => '关于我们'
+        ]);
+    }
 
 }

@@ -1,4 +1,4 @@
-<?php /*a:4:{s:54:"/home/code/yq/application/admin/view/config/index.html";i:1556897672;s:53:"/home/code/yq/application/admin/view/layout/main.html";i:1556897673;s:55:"/home/code/yq/application/admin/view/layout/header.html";i:1556897673;s:53:"/home/code/yq/application/admin/view/layout/left.html";i:1556897673;}*/ ?>
+<?php /*a:4:{s:54:"/home/code/yq/application/admin/view/config/index.html";i:1557413336;s:53:"/home/code/yq/application/admin/view/layout/main.html";i:1557413336;s:55:"/home/code/yq/application/admin/view/layout/header.html";i:1556897673;s:53:"/home/code/yq/application/admin/view/layout/left.html";i:1557413336;}*/ ?>
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -87,22 +87,22 @@
             <ul id="left-menu">
                 <li><a href="<?php echo url('index/index'); ?>"><i class="fa fa-home"></i><span>后台首页</span></a></li>
                 <?php foreach($menus as $menu): if($menu->getLevel() == 1): ?>
-                        <li class="dropdown">
-                            <a href="javascript:;" data-toggle="dropdown">
-                                <i class="<?php echo config('app.menu_icon')[$menu->getShrotName()] ?? ''; ?>"></i><span><?php echo htmlentities($menu->getShrotName()); ?></span><i
-                                    class="toggle-accordion"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <?php foreach($menus as $child): if($child->getParentId() == $menu->getId()): ?>
+                <li class="dropdown">
+                    <a href="javascript:;" data-toggle="dropdown">
+                        <i class="<?php echo config('app.menu_icon')[$menu->getShrotName()] ?? ''; ?>"></i><span><?php echo htmlentities($menu->getShrotName()); ?></span><i
+                            class="toggle-accordion"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <?php foreach($menus as $child): if($child->getParentId() == $menu->getId()): ?>
 
-                                        <li <?php echo htmlentities($child->checkPathActive()); if($child->checkPathActive()): ?> class="active" <?php endif; ?>><a
-                                                href="<?php echo htmlentities($child->getUrl()); ?>"><span><?php echo htmlentities($child->getShrotName()); ?></span></a>
-                                        </li>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </ul>
+                        <li <?php echo htmlentities($child->checkPathActive()); if($child->checkPathActive()): ?> class="active" <?php endif; ?>><a
+                                href="<?php echo htmlentities($child->getUrl()); ?>"><span><?php echo htmlentities($child->getShrotName()); ?></span></a>
                         </li>
-                    <?php endif; ?>
+                        <?php endif; ?>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
+                <?php endif; ?>
                 <?php endforeach; ?>
             </ul>
         </nav>
@@ -119,7 +119,7 @@
             $("#left-menu").find('.dropdown').each(function () {
                 if ($(this).find('li').hasClass('active')) {
                     $(this).addClass('collapse-open open');
-                }else{
+                } else {
                     $(this).removeClass('collapse-open open');
                 }
             })
@@ -127,14 +127,14 @@
     </script>
 </aside>
 
-        <section class="main-content" >
+        <section class="main-content">
 
             <div class="content-wrap ">
                 
 <section class="panel">
 
     <header class="panel-heading">
-    <h4>网站配置</h4>
+        <h4>网站配置</h4>
     </header>
     <div class="panel-body" style="padding-bottom: 50px">
         <form class="form-horizontal" method="post" action="<?php echo url('admin/index/edit'); ?>" enctype="multipart/form-data">
@@ -155,7 +155,7 @@
                     <img src="<?php echo htmlentities($list['logo']); ?>" width="200" height="200">
                 </div>
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label class="col-sm-2 control-label">公众号</label>
 
                 <div class="col-sm-5">
@@ -171,46 +171,47 @@
                     <input type="text" name="keyword" class="form-control" placeholder="请输入关键词" value="<?php echo htmlentities($list['keyword']); ?>">
                 </div>
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label class="col-sm-2 control-label">网站描述(seo)</label>
 
                 <div class="col-sm-5">
-                    <input type="text" name="msg" class="form-control" placeholder="请输入网站描述" value="<?php echo htmlentities($list['msg']); ?>"> 
+                    <input type="text" name="msg" class="form-control" placeholder="请输入网站描述" value="<?php echo htmlentities($list['msg']); ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">公司名称</label>
 
                 <div class="col-sm-5">
-                    <input type="text" name="name" class="form-control" placeholder="请输入公司名称" value="<?php echo htmlentities($list['name']); ?>"> 
+                    <input type="text" name="name" class="form-control" placeholder="请输入公司名称" value="<?php echo htmlentities($list['name']); ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">服务热线</label>
 
                 <div class="col-sm-5">
-                    <input type="text" name="mobile" class="form-control" placeholder="请输入公司服务热线" value="<?php echo htmlentities($list['mobile']); ?>"> 
+                    <input type="text" name="mobile" class="form-control" placeholder="请输入公司服务热线"
+                           value="<?php echo htmlentities($list['mobile']); ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">地址</label>
 
                 <div class="col-sm-5">
-                    <input type="text" name="address" class="form-control" placeholder="请输入地址" value="<?php echo htmlentities($list['address']); ?>"> 
+                    <input type="text" name="address" class="form-control" placeholder="请输入地址" value="<?php echo htmlentities($list['address']); ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">email</label>
 
                 <div class="col-sm-5">
-                    <input type="text" name="email" class="form-control" placeholder="请输入email" value="<?php echo htmlentities($list['email']); ?>"> 
+                    <input type="text" name="email" class="form-control" placeholder="请输入email" value="<?php echo htmlentities($list['email']); ?>">
                 </div>
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label class="col-sm-2 control-label">备案号</label>
 
                 <div class="col-sm-5">
-                    <input type="text" name="record" class="form-control" placeholder="请输入公司备案号" value="<?php echo htmlentities($list['record']); ?>"> 
+                    <input type="text" name="record" class="form-control" placeholder="请输入公司备案号" value="<?php echo htmlentities($list['record']); ?>">
                 </div>
             </div>
             <div class="form-group">
@@ -244,7 +245,7 @@
 <script src="/admin/js/panel.js"></script>
 
 
-    <script src="/admin/vendor/fuelux/checkbox.js"></script>
+<script src="/admin/vendor/fuelux/checkbox.js"></script>
 
 </body>
 </html>

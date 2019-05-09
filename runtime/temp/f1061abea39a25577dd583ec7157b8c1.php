@@ -1,4 +1,4 @@
-<?php /*a:4:{s:53:"/home/code/yq/application/admin/view/index/index.html";i:1556897673;s:53:"/home/code/yq/application/admin/view/layout/main.html";i:1556897673;s:55:"/home/code/yq/application/admin/view/layout/header.html";i:1556897673;s:53:"/home/code/yq/application/admin/view/layout/left.html";i:1556897673;}*/ ?>
+<?php /*a:4:{s:53:"/home/code/yq/application/admin/view/index/index.html";i:1557413336;s:53:"/home/code/yq/application/admin/view/layout/main.html";i:1557413336;s:55:"/home/code/yq/application/admin/view/layout/header.html";i:1556897673;s:53:"/home/code/yq/application/admin/view/layout/left.html";i:1557413336;}*/ ?>
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -87,22 +87,22 @@
             <ul id="left-menu">
                 <li><a href="<?php echo url('index/index'); ?>"><i class="fa fa-home"></i><span>后台首页</span></a></li>
                 <?php foreach($menus as $menu): if($menu->getLevel() == 1): ?>
-                        <li class="dropdown">
-                            <a href="javascript:;" data-toggle="dropdown">
-                                <i class="<?php echo config('app.menu_icon')[$menu->getShrotName()] ?? ''; ?>"></i><span><?php echo htmlentities($menu->getShrotName()); ?></span><i
-                                    class="toggle-accordion"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <?php foreach($menus as $child): if($child->getParentId() == $menu->getId()): ?>
+                <li class="dropdown">
+                    <a href="javascript:;" data-toggle="dropdown">
+                        <i class="<?php echo config('app.menu_icon')[$menu->getShrotName()] ?? ''; ?>"></i><span><?php echo htmlentities($menu->getShrotName()); ?></span><i
+                            class="toggle-accordion"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <?php foreach($menus as $child): if($child->getParentId() == $menu->getId()): ?>
 
-                                        <li <?php echo htmlentities($child->checkPathActive()); if($child->checkPathActive()): ?> class="active" <?php endif; ?>><a
-                                                href="<?php echo htmlentities($child->getUrl()); ?>"><span><?php echo htmlentities($child->getShrotName()); ?></span></a>
-                                        </li>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </ul>
+                        <li <?php echo htmlentities($child->checkPathActive()); if($child->checkPathActive()): ?> class="active" <?php endif; ?>><a
+                                href="<?php echo htmlentities($child->getUrl()); ?>"><span><?php echo htmlentities($child->getShrotName()); ?></span></a>
                         </li>
-                    <?php endif; ?>
+                        <?php endif; ?>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
+                <?php endif; ?>
                 <?php endforeach; ?>
             </ul>
         </nav>
@@ -119,7 +119,7 @@
             $("#left-menu").find('.dropdown').each(function () {
                 if ($(this).find('li').hasClass('active')) {
                     $(this).addClass('collapse-open open');
-                }else{
+                } else {
                     $(this).removeClass('collapse-open open');
                 }
             })
@@ -127,7 +127,7 @@
     </script>
 </aside>
 
-        <section class="main-content" >
+        <section class="main-content">
 
             <div class="content-wrap ">
                 
@@ -140,17 +140,17 @@
             <div class="panel-body">
                 <div id="user" style="width: 100%;height: 100%">
                     <table class="table table-hover">
-                       <?php if(is_array($config) || $config instanceof \think\Collection || $config instanceof \think\Paginator): $i = 0; $__LIST__ = $config;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                        <?php if(is_array($config) || $config instanceof \think\Collection || $config instanceof \think\Paginator): $i = 0; $__LIST__ = $config;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                         <tr>
                             <td><?php echo htmlentities($key); ?>：<?php echo htmlentities($vo); ?></td>
                         </tr>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                                            </table>
+                    </table>
                 </div>
             </div>
         </section>
     </div>
-  
+
 </div>
 
 
