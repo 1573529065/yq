@@ -82,8 +82,19 @@ class Index extends Base
      */
     public function news()
     {
+        $pagesize = 10;
+        $page = $this->request->get('p', 1);
+        $offset = ($page - 1) * 10;
+        $list = Db::table('news')->where('status', '=', 1)->limit($offset, $pagesize)->select();
+        dump($list);
+        $total = count($list);
+
+        $page = Db::table('news')->paginate(1, $total);
+
         return $this->fetch('news', [
-            'bs' => '新闻动态'
+            'bs' => '新闻动态',
+            'list' => $list,
+            'page' => $page->render()
         ]);
     }
 
