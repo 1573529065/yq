@@ -1,0 +1,128 @@
+{extend name="layout/main" /}
+
+{block name="header"}
+
+{/block}
+
+{block name="content"}
+<section class="panel">
+    <header class="panel-heading">
+        <h4>新闻动态展示</h4>
+    </header>
+    <div class="panel-body" style="padding-bottom: 50px">
+        <div class="row clearfix " style="margin-bottom: 15px">
+            <a type="button" href="/admin/certificate/certificate_add" class="btn btn-info">添加证书</a>
+        </div>
+        <table class="table table-bordered table-striped no-margin">
+            <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">标题</th>
+                <th class="text-center">内容</th>
+                <th class="text-center">是否前台显示</th>
+                <th class="text-center">添加时间</th>
+                <th class="text-center">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if !empty($list)}
+            {foreach $list as $item}
+            <tr>
+                <td class="text-center">{$item['id']}</td>
+                <td class="text-center">{$item['title']}</td>
+                <td class="text-center">{$item['content']}</td>
+                <td class="text-center">
+                    <?php if($item['show'] == 1) {?>
+                    <a data-url="{:url('news/delete',['id'=>$item['id']])}" onclick="main.ajaxDelete(this)" class="btn btn-xs btn-danger">不显示</a>
+                    <a href="javascript:void(0);" data-type="1" class="btn btn-xs btn-danger show">不显示</a>
+
+                </td>
+                <td class="text-center">
+                    <a href="{:url('certificate/c_edit',['id'=>$item['id']])}" class="btn btn-xs btn-info">编辑</a>
+                    <a data-url="{:url('news/delete',['id'=>$item['id']])}" onclick="main.ajaxDelete(this)" data-msg="确定要删除吗？" class="btn btn-xs btn-danger">删除</a>
+                </td>
+            </tr>
+            {/foreach}
+            {else /}
+            <tr class="text-center">
+                <td colspan="5">暂无数据</td>
+            </tr>
+            {/if}
+            </tbody>
+        </table>
+        <div class="page" style="text-align: center">
+            {:$list->render()}
+        </div>
+    </div>
+</section>
+{/block}
+
+
+{block name="footer"}
+<script>
+    $('#delete').click(function(){
+        var id = $(this).attr('data-id');
+        $.confirm({})
+    });
+
+    // ajaxDelete: function (event) {
+    //     var message = $(event).attr('data-msg');
+    //     var url = $(event).attr('data-url');
+    //     $.confirm({
+    //         title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+    //         content: '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">' + message + '</div>',
+    //         confirmButton: '确定',
+    //         confirmButtonClass: 'btn btn-info',
+    //         cancelButton: '取消',
+    //         cancelButtonClass: 'btn btn-danger',
+    //         animation: 'scaleY',
+    //         theme: 'material',
+    //         confirm: function () {
+    //             $.ajax({
+    //                 url: url,
+    //                 method: 'POST',
+    //                 dataType: 'json',
+    //                 success: function (response) {
+    //                     if(response.code == 1){
+    //                         main.waringAlert(response.message)
+    //                     }else{
+    //                         if (response.toUrl) {
+    //                             window.location.href = response.toUrl;
+    //                             return false;
+    //                         }else{
+    //                             window.location.reload();
+    //                             return false;
+    //                         }
+    //                     }
+    //                 },
+    //             })
+    //         }
+    //
+    //     });
+    // }
+
+    $('.send').click(function () {
+        id = $(this).attr('data-id');
+        num = $('#send_' + id).val();
+        if (num == '') {
+            return false;
+        }
+
+        $.ajax({
+            url: "{:url('send')}",
+            method: 'POST',
+            dataType: 'json',
+            data: {id: id, numbers: num},
+            success: function (response) {
+                console.log(response);
+                main.waringAlert(response.msg)
+                if (response.code == 200) {
+                    window.location.reload();
+                }
+            },
+        })
+    });
+
+
+</script>
+{/block}
