@@ -103,8 +103,13 @@ class Index extends Base
      */
     public function news_det()
     {
+        $id = $this->request->get('id');
+
+        $info = Db::table('news')->where(['id' => $id])->find();
+
         return $this->fetch('news_det', [
-            'bs' => '新闻动态'
+            'bs' => '新闻动态',
+            'info' => $info
         ]);
     }
 
