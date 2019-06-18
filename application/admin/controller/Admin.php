@@ -14,13 +14,12 @@ class Admin extends Controller
     {
         if (php_sapi_name() != 'cli') {
             //判断用户是否登录
-            $service = new \app\admin\service\rbac\Users\Service();
+            $service = new Service();
             if (!$service->getManageId()) {
                 $this->redirect('login/index');
             }
 
             //判断权限
-            $service = new \app\admin\service\rbac\Users\Service();
             if (!$service->checkAuth()) {
                 if (Request::isAjax()) {
                     throw new AdminException('没有权限操作，请联系管理员');

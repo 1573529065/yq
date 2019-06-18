@@ -18,9 +18,7 @@ class News extends Admin
     {
         $list = Db::table('news')->paginate(15);
 
-        return $this->render('index', [
-            'list' => $list
-        ]);
+        return $this->render('index', ['list' => $list]);
     }
 
     /**
@@ -31,31 +29,25 @@ class News extends Admin
     public function add(Request $request)
     {
         if (request()->isPost()) {
-            $data = input('post.');
-            $file = $request->file();
-            if (empty($file)) $this->error('图片不能为空', '', '', 1);
+            $title = input('post.title');
+            $content = input('post.content');
+            $show = input('post.show');
+            $data = [
+                'title' => $title,
+                'content' => $content,
+                'show' => $show,
+                'admin_id' => 9999,
+                'created_at' => date('Y-m-d H:i:s')
+            ];
 
-            $file = $file['img'];
-            if (!$file) {
-                $this->error('添加失败', '', '', 1);
-            }
-            // 移动到框架应用根目录/uploads/ 目录下
-            $info = $file->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads');
-            if (!$info) {
-                $this->error($file->getError(), '', '', 1);
-            }
-            $img = '/uploads/' . $info->getSaveName();
-            $data['img'] = $img;
-
-            $data['introduce'] = str_replace(" ", " ", str_replace("\n", "<br/>", $data['introduce']));
-            $res = Db::table('certificate')->insert($data);
+            $res = Db::table('news')->insert($data);
             if ($res) {
-                $this->success('添加成功', 'certificate', '', 1);
+                $this->success('添加成功', 'index', '', 1);
             }
             $this->error('添加失败', '', '', 1);
 
         }
-        return $this->render('certificate_add');
+        return $this->render('add');
     }
 
     /**

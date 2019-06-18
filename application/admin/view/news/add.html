@@ -5,33 +5,38 @@
 {/block}
 
 {block name="content"}
-<script type="text/javascript" src='https://unpkg.com/wangeditor/release/wangEditor.min.js'></script>
+<script type="text/javascript" src='/admin/js/wangEditor.min.js'></script>
 <section class="panel">
     <header class="panel-heading">
-        <h4>添加证书</h4>
+        <h4>添加新闻动态</h4>
     </header>
     <div class="panel-body" style="padding-bottom: 50px">
-        <form class="form-horizontal" method="post" action="certificate_add" role="form" enctype="multipart/form-data">
+        <form class="form-horizontal" method="post" action="add" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label class="col-sm-2 control-label">标题</label>
-
                 <div class="col-sm-5">
-                    <input type="text" value="" name="title" class="form-control" placeholder="请输入标题">
+                    <input type="text" value="" name="title" class="form-control" autocomplete="off" placeholder="请输入标题">
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">图片</label>
-                <div class="col-sm-5">
-                    <input type="file" name="img" id="img" class="form-control">
-                </div>
-                <div class="col-sm-5 help-block">
-                    修改请重新选择
-                </div>
-            </div>
+            <!--<div class="form-group">-->
+                <!--<label class="col-sm-2 control-label">图片</label>-->
+                <!--<div class="col-sm-5">-->
+                    <!--<input type="file" name="img" id="img" class="form-control">-->
+                <!--</div>-->
+                <!--<div class="col-sm-5 help-block">修改请重新选择</div>-->
+            <!--</div>-->
             <div class="form-group">
                 <label class="col-sm-2 control-label">介绍</label>
                 <div class="col-sm-5">
-                    <textarea rows="5" cols="50" name='introduce' id='content'></textarea>
+                    <textarea rows="5" cols="50" name='content' id='content'></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">是否显示</label>
+                <div class="col-sm-5">
+                    <input type="radio" name="show" value="1"> 是 &nbsp;&nbsp;
+                    <input type="radio" name="show" value="2"> 否
                 </div>
             </div>
 
@@ -86,9 +91,9 @@
 </script>
 <script>
     function add() {
-        title = $("input[name='title']").val();
-        content = $("#content").val();
-        img = $("#img").val();
+        var title = $("input[name='title']").val();
+        var content = $("#content").val();
+        var show = $('#show').val();
         if (!title || !content) {
             $.alert({
                 title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
@@ -100,17 +105,17 @@
             });
             return false;
         }
-        if (!img) {
-            $.alert({
-                title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
-                content: "图片不能为空！",
-                confirmButton: '确定',
-                confirmButtonClass: 'btn btn-info',
-                animation: 'scaleY',
-                theme: 'material'
-            });
-            return false;
-        }
+        // if (!img) {
+        //     $.alert({
+        //         title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+        //         content: "图片不能为空！",
+        //         confirmButton: '确定',
+        //         confirmButtonClass: 'btn btn-info',
+        //         animation: 'scaleY',
+        //         theme: 'material'
+        //     });
+        //     return false;
+        // }
         // return false;
         $.confirm({
             title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',

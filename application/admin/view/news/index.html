@@ -7,19 +7,19 @@
 {block name="content"}
 <section class="panel">
     <header class="panel-heading">
-        <h4>新闻动态展示</h4>
+        <h4>新闻动态管理</h4>
     </header>
     <div class="panel-body" style="padding-bottom: 50px">
         <div class="row clearfix " style="margin-bottom: 15px">
-            <a type="button" href="/admin/certificate/certificate_add" class="btn btn-info">添加证书</a>
+            <a type="button" href="/admin/news/add" class="btn btn-info">添加新闻</a>
         </div>
         <table class="table table-bordered table-striped no-margin">
             <thead>
             <tr>
                 <th class="text-center">ID</th>
                 <th class="text-center">标题</th>
-                <th class="text-center">内容</th>
-                <th class="text-center">是否前台显示</th>
+                <th class="text-center">查看数</th>
+                <th class="text-center">显示</th>
                 <th class="text-center">添加时间</th>
                 <th class="text-center">操作</th>
             </tr>
@@ -30,16 +30,11 @@
             <tr>
                 <td class="text-center">{$item['id']}</td>
                 <td class="text-center">{$item['title']}</td>
-                <td class="text-center">{$item['content']}</td>
-                <td class="text-center">
-                    <?php if($item['show'] == 1) {?>
-                    <a data-url="{:url('news/delete',['id'=>$item['id']])}" onclick="main.ajaxDelete(this)" class="btn btn-xs btn-danger">不显示</a>
-                    <a href="javascript:void(0);" data-type="1" class="btn btn-xs btn-danger show">不显示</a>
-
-                </td>
-                <td class="text-center">
-                    <a href="{:url('certificate/c_edit',['id'=>$item['id']])}" class="btn btn-xs btn-info">编辑</a>
-                    <a data-url="{:url('news/delete',['id'=>$item['id']])}" onclick="main.ajaxDelete(this)" data-msg="确定要删除吗？" class="btn btn-xs btn-danger">删除</a>
+                <td class="text-center">{$item['look_num']}</td>
+                <td class="text-center">{$item['show'] == 1 ? '是' : '否'}</td>
+                <td class="text-center">{$item['created_at']}</td>
+                <td class="text-center"> <a href="{:url('certificate/c_edit',['id'=>$item['id']])}" class="btn btn-xs btn-info">编辑</a>
+                    <a data-url="{:url('certificate/c_del',['id'=>$item['id']])}" onclick="main.ajaxDelete(this)" data-msg="确定要删除吗？" class="btn btn-xs btn-danger">删除</a>
                 </td>
             </tr>
             {/foreach}
@@ -60,51 +55,26 @@
 
 {block name="footer"}
 <script>
-    $('#delete').click(function(){
-        var id = $(this).attr('data-id');
-        $.confirm({})
-    });
-
-    // ajaxDelete: function (event) {
-    //     var message = $(event).attr('data-msg');
-    //     var url = $(event).attr('data-url');
-    //     $.confirm({
-    //         title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
-    //         content: '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">' + message + '</div>',
-    //         confirmButton: '确定',
-    //         confirmButtonClass: 'btn btn-info',
-    //         cancelButton: '取消',
-    //         cancelButtonClass: 'btn btn-danger',
-    //         animation: 'scaleY',
-    //         theme: 'material',
-    //         confirm: function () {
-    //             $.ajax({
-    //                 url: url,
-    //                 method: 'POST',
-    //                 dataType: 'json',
-    //                 success: function (response) {
-    //                     if(response.code == 1){
-    //                         main.waringAlert(response.message)
-    //                     }else{
-    //                         if (response.toUrl) {
-    //                             window.location.href = response.toUrl;
-    //                             return false;
-    //                         }else{
-    //                             window.location.reload();
-    //                             return false;
-    //                         }
-    //                     }
-    //                 },
-    //             })
-    //         }
-    //
-    //     });
-    // }
-
-    $('.send').click(function () {
+    function down(tar){
+        href = window.location.href;
+        $(tar).attr("href",href+"&is_down=1");
+    }
+    function detailed(id) {
+        $('.deta_'+id).css('display','none');
+        $('.close_'+id).css('display','');
+        $(".xiang_"+id).css('display','');
+        $(".xiang1_"+id).css('display','');
+    }
+    function detailed_close(id){
+        $('.deta_'+id).css('display','');
+        $('.close_'+id).css('display','none');
+        $(".xiang_"+id).css('display','none');
+        $(".xiang1_"+id).css('display','none');
+    }
+    $('.send').click(function(){
         id = $(this).attr('data-id');
-        num = $('#send_' + id).val();
-        if (num == '') {
+        num = $('#send_'+id).val();
+        if(num == ''){
             return false;
         }
 
@@ -112,11 +82,11 @@
             url: "{:url('send')}",
             method: 'POST',
             dataType: 'json',
-            data: {id: id, numbers: num},
+            data:{id:id,numbers:num},
             success: function (response) {
                 console.log(response);
                 main.waringAlert(response.msg)
-                if (response.code == 200) {
+                if(response.code == 200){
                     window.location.reload();
                 }
             },
