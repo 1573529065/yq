@@ -16,7 +16,7 @@ class News extends Admin
      */
     public function index()
     {
-        $list = Db::table('news')->paginate(15);
+        $list = Db::table('news')->where("status!=:status")->bind(['status'=>[-1,\PDO::PARAM_INT]])->paginate(15);
 
         return $this->render('index', ['list' => $list]);
     }
@@ -53,36 +53,32 @@ class News extends Admin
     /**
      * 新闻动态 编辑
      * @return mixed
-     * @throws \think\Exception
-     * @throws \think\db\exception\DataNotFoundException
-     * @throws \think\db\exception\ModelNotFoundException
-     * @throws \think\exception\DbException
-     * @throws \think\exception\PDOException
      */
     public function edit()
     {
         if (request()->isPost()) {
-            $data = input('post.');
-            $file = request()->file('img');
-            if ($file) {
-                // 移动到框架应用根目录/uploads/ 目录下
-                $info = $file->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads');
-                if (!$info)
-                    $this->error($file->getError(), '', '', 1);
-                $img = '/uploads/' . $info->getSaveName();
-                $data['img'] = $img;
+            $id = input('post.id');
+            $title = input('post.title');
+            $content = input('post.content');
+            $show = input('post.show');
+            $data = [
+                'id' => $id,
+                'title' => $title,
+                'content' => $content,
+                'show' => $show,
+                'updated_at' => date('Y-m-d H:i:s')
+            ];
+
+            $res = Db::table('news')->update($data);
+            if ($res) {
+                $this->success('编辑成功', 'index', '', 1);
             }
-            $data['introduce'] = str_replace(" ", " ", str_replace("\n", "<br/>", $data['introduce']));
-            $result = Db::table('certificate')->where("id=:id", ['id' => [$data['id'], \PDO::PARAM_INT]])->update($data);
-            if ($result === false) {
-                $this->error('修改失败', '', '', 1);
-            }
-            $this->success('修改成功', 'certificate', '', 1);
+            $this->error('编辑失败', '', '', 1);
         }
+
         $id = input('get.id');
-        $res = Db::table('certificate')->where("id=:id", ['id' => [$id, \PDO::PARAM_INT]])->find();
-        $res['introduce'] = str_replace('<br/>', '', $res['introduce']);
-        return $this->render('c_edit', ['res' => $res]);
+        $res = Db::table('news')->where("id=:id", ['id' => [$id, \PDO::PARAM_INT]])->find();
+        return $this->render('edit', ['res' => $res]);
     }
 
     /**
@@ -101,7 +97,8 @@ class News extends Admin
         $res = Db::table('news')
             ->where("id=:id", ['id' => [$id, \PDO::PARAM_INT]])
             ->update([
-                'status' => -1
+                'status' => -1,
+                'updated_at' => date('Y-m-d H:i:s')
             ]);
 
         if ($res) {

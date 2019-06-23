@@ -86,10 +86,9 @@ class Index extends Base
         $page = $this->request->get('p', 1);
         $offset = ($page - 1) * 10;
         $list = Db::table('news')->where('status', '=', 1)->limit($offset, $pagesize)->select();
-        dump($list);
         $total = count($list);
 
-        $page = Db::table('news')->paginate(1, $total);
+        $page = Db::table('news')->paginate($pagesize, $total);
 
         return $this->fetch('news', [
             'bs' => '新闻动态',

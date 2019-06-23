@@ -33,8 +33,8 @@
                 <td class="text-center">{$item['look_num']}</td>
                 <td class="text-center">{$item['show'] == 1 ? '是' : '否'}</td>
                 <td class="text-center">{$item['created_at']}</td>
-                <td class="text-center"> <a href="{:url('certificate/c_edit',['id'=>$item['id']])}" class="btn btn-xs btn-info">编辑</a>
-                    <a data-url="{:url('certificate/c_del',['id'=>$item['id']])}" onclick="main.ajaxDelete(this)" data-msg="确定要删除吗？" class="btn btn-xs btn-danger">删除</a>
+                <td class="text-center"> <a href="{:url('news/edit',['id'=>$item['id']])}" class="btn btn-xs btn-info">编辑</a>
+                    <a data-url="{:url('news/delete',['id'=>$item['id']])}" onclick="main.ajaxDelete(this)" data-msg="确定要删除吗？" class="btn btn-xs btn-danger">删除</a>
                 </td>
             </tr>
             {/foreach}

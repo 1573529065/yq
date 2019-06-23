@@ -11,36 +11,34 @@
         <h4>编辑证书</h4>
     </header>
     <div class="panel-body" style="padding-bottom: 50px">
-        <form class="form-horizontal" method="post" action="c_edit" role="form" enctype="multipart/form-data">
+        <form class="form-horizontal" method="post" action="edit" role="form" enctype="multipart/form-data">
+            <input type="hidden" value="{$res.id}" name="id" >
             <div class="form-group">
                 <label class="col-sm-2 control-label">标题</label>
-        <input type="hidden" value="{$res.id}" name="id" >
                 <div class="col-sm-5">
                     <input type="text" value="{$res.title}" name="title" class="form-control"
                            placeholder="请输入标题">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">图片</label>
-
-                <div class="col-sm-5">
-                    <input type="file" name="img" class="form-control">
-                </div>
-                <div class="col-sm-5 help-block">
-                    修改请重新选择
                 </div>
             </div>
              <div class="form-group">
                 <label class="col-sm-2 control-label">介绍</label>
 
                 <div class="col-sm-5">
-                   <textarea rows="5" cols="50" name='introduce' id='content'>{:htmlspecialchars_decode($res['introduce'])}</textarea>
+                   <textarea rows="5" cols="50" name='content' id='content'>{:htmlspecialchars_decode($res['content'])}</textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">是否显示</label>
+                <div class="col-sm-5">
+                    <input type="radio" name="show" <?php echo $res['show'] == 1 ? 'checked' : ''; ?> value="1"> 是 &nbsp;&nbsp;
+                    <input type="radio" name="show" <?php echo $res['show'] == -1 ? 'checked' : ''; ?> value="-1"> 否
                 </div>
             </div>
         
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" data-url="" class="btn btn-primary" onclick="return add()">提交
+                    <button type="submit" data-url="" class="btn btn-primary" onclick="return edit()">提交
                     </button>
                 </div>
             </div>
@@ -52,13 +50,7 @@
 
 {block name="footer"}
 <script src="/admin/vendor/fuelux/checkbox.js"></script>
-<!--  <script>
-        $(function(){
-            $('.w-e-text').html("");
-        })
-        
-    </script>-->
- <script>
+<script>
         var E = window.wangEditor;
         var editor = new E('#editor');
         var $content = $('#content');
@@ -86,38 +78,36 @@
         $(function(){
             $(".w-e-text-container").css('height','600px')
         })
-    </script>
-<script>
-                        function add() {
-                            title = $("input[name='title']").val();
-                            content = $("#content").val();
-                            if (!title || !content) {
-                                $.alert({
-                                    title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
-                                    content: "请填写完整！",
-                                    confirmButton: '确定',
-                                    confirmButtonClass: 'btn btn-info',
-                                    animation: 'scaleY',
-                                    theme: 'material'
-                                })
-                                return false;
-                            }
-                            $.confirm({
-                                title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
-                                content: '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">确定提交？</div>',
-                                confirmButton: '确定',
-                                confirmButtonClass: 'btn btn-info',
-                                cancelButton: '取消',
-                                cancelButtonClass: 'btn btn-danger',
-                                animation: 'scaleY',
-                                theme: 'material',
-                                confirm: function () {
-                                    $('form').submit();
-                                }
 
-                            });
-                            return false;
-                        }
+        function add() {
+            title = $("input[name='title']").val();
+            content = $("#content").val();
+            if (!title || !content) {
+                $.alert({
+                    title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+                    content: "请填写完整！",
+                    confirmButton: '确定',
+                    confirmButtonClass: 'btn btn-info',
+                    animation: 'scaleY',
+                    theme: 'material'
+                })
+                return false;
+            }
+            $.confirm({
+                title: '<strong style="color: #c7254e;font-size: 16px">温馨提示</strong>',
+                content: '<div class="text-center" style="border-top:1px solid #eee;padding-top: 20px">确定提交？</div>',
+                confirmButton: '确定',
+                confirmButtonClass: 'btn btn-info',
+                cancelButton: '取消',
+                cancelButtonClass: 'btn btn-danger',
+                animation: 'scaleY',
+                theme: 'material',
+                confirm: function () {
+                    $('form').submit();
+                }
 
+            });
+            return false;
+        }
 </script>
 {/block}

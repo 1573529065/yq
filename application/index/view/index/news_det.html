@@ -14,8 +14,7 @@
     <div class="wp">
         <!-- cur -->
         <div class="cur">
-            <a href="http://www.zhixinlawoffice.com/list-18-1.html">知信出品</a> > <a
-                href="http://www.zhixinlawoffice.com/list-19-1.html">知信文集</a> > 正文
+            <a href="news.html">新闻动态</a> > 正文
         </div>
         <!-- cur end -->
         <!-- row-jg01 -->
@@ -35,10 +34,10 @@
         <div class="row-j02">
             <div class="txt wow fadeInUp">
                 <h3>正文详情</h3>
-                </div>
                 <div style="text-align:center;">
-                {$info['content']}
+                    <?php echo nl2br($info['content']); ?>
                 </div>
+            </div>
         </div>
         <!-- row-jg02 end -->
     </div>
