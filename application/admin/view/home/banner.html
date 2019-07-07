@@ -33,8 +33,10 @@
                         </a></td>
                     <td class="text-center">{$entity['title']}</td>
                     <td class="text-center">{$entity['sort']}</td>
-                    <td class="text-center"> <a href="{:url('home/b_edit',['id'=>$entity['id']])}" class="btn btn-xs btn-info">编辑</a>
-                   <a data-url="{:url('home/b_del',['id'=>$entity['id']])}" onclick="main.ajaxDelete(this)" data-msg="确定要删除吗？" class="btn btn-xs btn-danger">删除</a>
+                    <td class="text-center">
+                        <a href="{:url('home/b_edit',['id'=>$entity['id']])}" class="btn btn-xs btn-info">编辑</a>
+                        <a data-url="{:url('home/b_del',['id'=>$entity['id']])}" onclick="main.ajaxDelete(this)"
+                           data-msg="确定要删除吗？" class="btn btn-xs btn-danger">删除</a>
                     </td>
                 </tr>
                 {/foreach}
@@ -55,44 +57,46 @@
 
 {block name="footer"}
 <script>
-    function down(tar){
+    function down(tar) {
         href = window.location.href;
-        $(tar).attr("href",href+"&is_down=1");
+        $(tar).attr("href", href + "&is_down=1");
     }
+
     function detailed(id) {
-        $('.deta_'+id).css('display','none');
-        $('.close_'+id).css('display','');
-        $(".xiang_"+id).css('display','');
-        $(".xiang1_"+id).css('display','');
+        $('.deta_' + id).css('display', 'none');
+        $('.close_' + id).css('display', '');
+        $(".xiang_" + id).css('display', '');
+        $(".xiang1_" + id).css('display', '');
     }
-    function detailed_close(id){
-        $('.deta_'+id).css('display','');
-        $('.close_'+id).css('display','none');
-        $(".xiang_"+id).css('display','none');
-        $(".xiang1_"+id).css('display','none');
+
+    function detailed_close(id) {
+        $('.deta_' + id).css('display', '');
+        $('.close_' + id).css('display', 'none');
+        $(".xiang_" + id).css('display', 'none');
+        $(".xiang1_" + id).css('display', 'none');
     }
-    $('.send').click(function(){
+
+    $('.send').click(function () {
         id = $(this).attr('data-id');
-        num = $('#send_'+id).val();
-        if(num == ''){
+        num = $('#send_' + id).val();
+        if (num == '') {
             return false;
         }
-        
+
         $.ajax({
-                    url: "{:url('send')}",
-                    method: 'POST',
-                    dataType: 'json',
-                    data:{id:id,numbers:num},
-                    success: function (response) {
-                        console.log(response);
-                         main.waringAlert(response.msg)
-                        if(response.code == 200){
-                             window.location.reload();
-                         }
-                    },
-                })
+            url: "{:url('send')}",
+            method: 'POST',
+            dataType: 'json',
+            data: {id: id, numbers: num},
+            success: function (response) {
+                console.log(response);
+                main.waringAlert(response.msg)
+                if (response.code == 200) {
+                    window.location.reload();
+                }
+            },
+        })
     });
-    
-    
+
 </script>
 {/block}

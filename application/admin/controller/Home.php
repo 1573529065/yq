@@ -10,7 +10,7 @@ class Home extends Admin {
     //首页-banner管理
     public function banner(){
      $list =  Db::table('banner')->order('sort')->paginate(15);
-    
+
      return $this->render('banner',['list'=>$list]);
     }
       //首页-banner添加
