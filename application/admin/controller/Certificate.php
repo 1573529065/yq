@@ -62,7 +62,7 @@ class Certificate extends Admin
         return $this->redirect('certificate');
     }
 
-    public function c_edit()
+    public function c_edit(Request $request)
     {
         if (request()->isPost()) {
             $data = input('post.');
