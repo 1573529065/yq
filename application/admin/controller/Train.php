@@ -33,7 +33,31 @@ class Train extends Admin
     public function add()
     {
         if ($this->request->isPost()){
+            $title = input('post.title');
+            $content = input('post.content');
+            $status = input('post.status');
 
+            $file = request()->file('img');
+            // 移动到框架应用根目录/uploads/ 目录下
+            $info = $file->validate(['size' => 1024 * 1024 * 5, 'ext' => 'jpg,png,gif'])->move('../public/uploads/train');
+            if (!$info){
+                $this->error($file->getError(), '', '', 1);
+            }
+
+            $img = '/uploads/train/' . $info->getSaveName();
+            $data = [
+                'title' => $title,
+                'content' => $content,
+                'img' => $img,
+                'status' => $status,
+                'created_at' => date('Y-m-d H:i:s')
+            ];
+
+            $res = Db::table('train')->insert($data);
+            if ($res) {
+                $this->success('添加成功', 'index', '', 1);
+            }
+            $this->error('添加失败', '', '', 1);
         }
 
         return $this->render('add');
